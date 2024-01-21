@@ -1,7 +1,4 @@
-import type { ClassKey } from "../classes/Classes";
-import type { SetKey } from "../sets/Sets";
-
-export type ShoeKey =
+type ShoeKey =
   | "eslippers" // Fluffy Slippers
   | "hboots" // Heavy Boots
   | "iceskates" // Ice Skates
@@ -20,7 +17,7 @@ export type ShoeKey =
   | "xboots" // Darkforge Boots
   | "xmasshoes"; // Xmas Shoes
 
-export interface GShoe {
+interface GShoe {
   a?: number | boolean;
   armor: number;
   /** An array of classes that can use this item. */

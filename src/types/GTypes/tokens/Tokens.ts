@@ -1,6 +1,6 @@
-export type TokenKey = "friendtoken" | "funtoken" | "monstertoken" | "pvptoken";
+type TokenKey = "friendtoken" | "funtoken" | "monstertoken" | "pvptoken";
 
-export interface GToken {
+interface GToken {
   harbringer?: number;
   spear?: number;
   weaponbox?: number;

@@ -1,6 +1,4 @@
-import type { SetKey } from "../sets/Sets";
-
-export type CapeKey =
+type CapeKey =
   | "angelwings" // Angel Wings
   | "bcape" // Well-Crafted Cape
   | "cape" // Cape
@@ -11,7 +9,7 @@ export type CapeKey =
   | "tigercape" // Cape of the Tiger
   | "vcape"; // Vampiric Cape
 
-export interface GCape {
+interface GCape {
   a?: boolean;
   action?: string;
   armor?: number;

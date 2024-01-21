@@ -1,6 +1,6 @@
-export type LicenceKey = "licence"; // Licence to Kill
+type LicenceKey = "licence"; // Licence to Kill
 
-export interface GLicence {
+interface GLicence {
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

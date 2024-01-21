@@ -1,6 +1,4 @@
-import type { SetKey } from "../sets/Sets";
-
-export type BeltKey =
+type BeltKey =
   | "dexbelt" // Belt of Dexterity
   | "hpbelt" // Belt of HP
   | "intbelt" // Belt of Intelligence
@@ -11,7 +9,7 @@ export type BeltKey =
   | "sbelt" // Belt of Hallowed Trials
   | "strbelt"; // Belt of Strength
 
-export interface GBelt {
+interface GBelt {
   a?: boolean;
   armor?: number;
   /** Contains information about what stats the item will gain with each compound level. Set if the item is compoundable. */

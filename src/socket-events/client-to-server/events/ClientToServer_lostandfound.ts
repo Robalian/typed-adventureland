@@ -1,1 +1,1 @@
-export type ClientToServer_lostandfound = "info" | undefined;
+type ClientToServer_lostandfound = "info" | undefined;

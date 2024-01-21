@@ -1,11 +1,9 @@
-import type { MapKey } from "../maps/Maps";
-
-export type BankKeyKey =
+type BankKeyKey =
   | "bkey" // The Bank Key
   | "dkey" // Diamond Key
   | "ukey"; // The Bank Key
 
-export interface GBankKey {
+interface GBankKey {
   action: string;
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */

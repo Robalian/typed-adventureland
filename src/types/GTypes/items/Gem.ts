@@ -1,4 +1,4 @@
-export type GemKey =
+type GemKey =
   | "candy0" // Rare Candy
   | "candy0v2" // Rare Candy [h2]
   | "candy0v3" // Rare Candy
@@ -19,7 +19,7 @@ export type GemKey =
   | "redenvelopev3" // Red Envelope
   | "redenvelopev4"; // Red Envelope
 
-export interface GGem {
+interface GGem {
   a?: number | boolean;
   /** Refers to how many items are needed to exchange (see .quest as well!) */
   e?: number;

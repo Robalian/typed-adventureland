@@ -1,6 +1,4 @@
-import type { AnimationKey } from "../animations/Animations";
-
-export type ProjectileKey =
+type ProjectileKey =
   | "acid"
   | "arrow"
   | "bigmagic"
@@ -38,7 +36,7 @@ export type ProjectileKey =
   | "wandy"
   | "wmomentum";
 
-export interface GProjectile {
+interface GProjectile {
   hit_animation?: AnimationKey;
   animation?: AnimationKey;
   speed?: number;

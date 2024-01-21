@@ -1,6 +1,4 @@
-import type { ItemKey } from "../items/index";
-
-export type DismantleKey =
+type DismantleKey =
   | "bowofthedead"
   | "bronzeingot"
   | "daggerofthedead"
@@ -22,7 +20,7 @@ export type DismantleKey =
   | "staffofthedead"
   | "swordofthedead";
 
-export interface GDismantle {
+interface GDismantle {
   items: Array<[quantity: number, item: ItemKey]>;
   cost: number;
 }

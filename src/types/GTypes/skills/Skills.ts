@@ -1,13 +1,4 @@
-import type { ClassKey } from "../classes/Classes";
-import type { ConditionKey } from "../conditions/Conditions";
-import type { DismantleKey } from "../dismantle/Dismantle";
-import type { ItemKey } from "../items/index";
-import type { ProjectileKey } from "../projectiles/Projectiles";
-import type { ThrowKey } from "../items/Throw";
-import type { WeaponType } from "../items/index";
-import { StatType } from "../../../items";
-
-export type SkillKey =
+type SkillKey =
   | "3shot" // 3-Shot
   | "4fingers" // 4 Finger Technique
   | "5shot" // 5-Shot
@@ -111,7 +102,7 @@ export type SkillKey =
   | "zap" // Zap
   | "zapperzap"; // Zap
 
-export interface GSkill {
+interface GSkill {
   action?: string;
   apiercing?: number;
   aura?: boolean;

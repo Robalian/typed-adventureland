@@ -1,7 +1,4 @@
-import type { ConditionKey } from "../conditions/Conditions";
-import type { SetKey } from "../sets/Sets";
-
-export type ElixirKey =
+type ElixirKey =
   | "ale" // Ale
   | "blue" // Blue Horizon
   | "bunnyelixir" // Bunny Energy Drink
@@ -36,7 +33,7 @@ export type ElixirKey =
   | "wine" // Red Wine
   | "xshot"; // X-Shot
 
-export interface GElixir {
+interface GElixir {
   a?: boolean;
   apiercing?: number;
   armor?: number;

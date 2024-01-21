@@ -1,16 +1,8 @@
-import { HitData } from "./character-event";
-import { ApiResponse } from "./game-event-api-response";
-import { ItemInfo } from "./items";
-import { TypedEventEmitter } from "./TypedEventEmitter";
-import { ItemKey } from "./types/GTypes/items";
-import { MapKey } from "./types/GTypes/maps";
-import { NpcKey } from "./types/GTypes/npcs";
-
-export type GameWithEventsFunctions = Pick<TypedEventEmitter<GameEvents>, "on" | "once" | "off"> & {
+type GameWithEventsFunctions = Pick<TypedEventEmitter<GameEvents>, "on" | "once" | "off"> & {
   all(callback?: (name: any, data: any) => void): void;
 };
 
-export interface GameHitEvent {
+interface GameHitEvent {
   source: string;
   /** monster id or character name, perhaps NPC name? */
   actor: string;
@@ -56,7 +48,7 @@ export interface GameHitEvent {
   // Not all properties are always set, if the value is false, [] or 0 - they are usually not set
 }
 
-export interface ActionEvent {
+interface ActionEvent {
   source: string;
   /** monster id or character name, perhaps NPC name? */
   actor: string;
@@ -73,7 +65,7 @@ export interface ActionEvent {
   instant?: boolean;
 }
 
-// export interface GameAttackActionEvent extends ActionEvent {
+// interface GameAttackActionEvent extends ActionEvent {
 //   source: "attack";
 //   damage: number;
 //   projectile: "momentum";
@@ -83,7 +75,7 @@ export interface ActionEvent {
 //   pid: string;
 // }
 
-// export interface GameHealActionEvent extends ActionEvent {
+// interface GameHealActionEvent extends ActionEvent {
 //   source: "heal";
 //   heal: number;
 //   projectile: "heal";
@@ -93,7 +85,7 @@ export interface ActionEvent {
 //   pid: string;
 // }
 
-// export interface GameCurseActionEvent extends ActionEvent {
+// interface GameCurseActionEvent extends ActionEvent {
 //   source: "curse";
 //   projectile: "curse";
 //   /** Arrival in ms */
@@ -102,7 +94,7 @@ export interface ActionEvent {
 //   pid: string;
 // }
 
-// export interface GameBurstActionEvent extends ActionEvent {
+// interface GameBurstActionEvent extends ActionEvent {
 //   source: "burst";
 //   ray: "burst";
 //   instant: boolean;
@@ -111,7 +103,7 @@ export interface ActionEvent {
 /**
  * Item bought from an NPC
  */
-export interface GameBuyEvent {
+interface GameBuyEvent {
   type: "+$";
   id: NpcKey;
   /** character name */
@@ -119,7 +111,7 @@ export interface GameBuyEvent {
   item: ItemInfo; //{ name: "mpot1"; q: 1 };
   event: "buy";
 }
-export interface GameSellEvent {
+interface GameSellEvent {
   type: "-$";
   id: NpcKey;
   /** character name */
@@ -132,7 +124,7 @@ export interface GameSellEvent {
 /**
  * Item bought from Ponty aka secondhand
  */
-export interface GamePontyBuy {
+interface GamePontyBuy {
   /** Character who triggered the event */
   name: string;
   item: {
@@ -145,7 +137,7 @@ export interface GamePontyBuy {
 }
 
 /** Item bought from Lost and Found */
-export interface GameLostAndFoundBuy {
+interface GameLostAndFoundBuy {
   /** Character who triggered the event */
   name: string;
   item: {
@@ -156,7 +148,7 @@ export interface GameLostAndFoundBuy {
   };
 }
 
-export interface GameEvents {
+interface GameEvents {
   level_up: {
     /** Character name */
     name: string;
@@ -245,5 +237,3 @@ export interface GameEvents {
   };
   hit: HitData;
 }
-
-export * from "./game-event-api-response";

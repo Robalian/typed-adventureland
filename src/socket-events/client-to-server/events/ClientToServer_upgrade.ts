@@ -1,4 +1,4 @@
-export type ClientToServer_upgrade = {
+type ClientToServer_upgrade = {
   calculate?: boolean;
   clevel: number;
   item_num: number;

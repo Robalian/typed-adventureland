@@ -1,20 +1,15 @@
-import { TradeSlotType } from "./entity";
-import { MapKey, StandKey } from "./G";
-import { TradeItemInfo } from "./items";
-import { BetterUXWrapper } from "./types/GTypes/utils";
-
-export type ServersAndCharactersApiResponse = {
+type ServersAndCharactersApiResponse = {
   type: "servers_and_characters";
   servers: [];
   characters: [];
 };
 
-export type FriendsApiResponse = {
+type FriendsApiResponse = {
   type: "friends";
   chars: unknown[];
 }
 
-export type MerchantsApiResponse = {
+type MerchantsApiResponse = {
   type: "merchants";
   chars: Array<{
     map: MapKey;
@@ -30,10 +25,10 @@ export type MerchantsApiResponse = {
     x: number;
   }>;
 };
-export type RawApiResponse = ServersAndCharactersApiResponse | MerchantsApiResponse;
-export type ApiResponse = BetterUXWrapper<RawApiResponse>;
+type RawApiResponse = ServersAndCharactersApiResponse | MerchantsApiResponse;
+type ApiResponse = BetterUXWrapper<RawApiResponse>;
 
-export interface ApiCalls {
+interface ApiCalls {
   pull_merchants: MerchantsApiResponse;
   pull_friends: FriendsApiResponse;
 }

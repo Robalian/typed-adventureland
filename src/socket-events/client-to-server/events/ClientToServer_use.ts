@@ -1,3 +1,3 @@
-export type ClientToServer_use = {
+type ClientToServer_use = {
   item: "hp" | "mp";
 };

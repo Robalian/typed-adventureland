@@ -1,9 +1,9 @@
-export type OfferingKey =
+type OfferingKey =
   | "offering" // Primordial Essence
   | "offeringp" // Primling
   | "offeringx"; // Primordial X
 
-export interface GOffering {
+interface GOffering {
   a: boolean;
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */

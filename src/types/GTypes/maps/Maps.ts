@@ -1,14 +1,4 @@
-import type { GameKey } from "../games/Games";
-import type { ImagesetKey } from "../imagesets/Imagesets";
-import type { DungeonKeyKey } from "../items";
-import type { MonsterKey } from "../monsters/Monsters";
-import type { NpcKey } from "../npcs/Npcs";
-import type { TilesetKey } from "../tilesets/Tilesets";
-import type { Tuple } from "../utils";
-import { EventKey } from "../events";
-import { GGeometry } from "../geometry";
-
-export type MapKey =
+type MapKey =
   | "abtesting" // A/B Testing
   | "arena" // Arena
   | "bank" // The Bank
@@ -63,9 +53,9 @@ export type MapKey =
   | "winterland" // Winterland
   | "woffice"; // Wizard's Crib
 
-export type MapZoneKey = "fishing" | "mining";
+type MapZoneKey = "fishing" | "mining";
 
-export interface GMap {
+interface GMap {
   animatables?: {
     the_door?: {
       position: string;

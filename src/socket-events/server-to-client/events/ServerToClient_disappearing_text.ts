@@ -1,4 +1,4 @@
-export type ServerToClient_disappearing_text = {
+type ServerToClient_disappearing_text = {
   message: string;
   x: number;
   y: number;

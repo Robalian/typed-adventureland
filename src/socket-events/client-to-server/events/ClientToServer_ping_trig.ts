@@ -1,3 +1,3 @@
-export type ClientToServer_ping_trig = {
+type ClientToServer_ping_trig = {
   id: string;
 };

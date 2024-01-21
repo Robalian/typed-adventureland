@@ -1,8 +1,8 @@
-export type MiscOffhandKey =
+type MiscOffhandKey =
   | "exoarm" // Exoskeletal Arm
   | "lantern"; // The Lantern
 
-export interface GMiscOffhand {
+interface GMiscOffhand {
   armor?: number;
   /** Contains information about what stats the item will gain with each compound level. Set if the item is compoundable. */
   compound: {

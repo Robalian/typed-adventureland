@@ -1,11 +1,4 @@
-import { CodeMessageEvent } from "./codemessage";
-import { ItemInfo } from "./items";
-import { TypedEventEmitter } from "./TypedEventEmitter";
-import { ItemKey } from "./types/GTypes/items";
-import { MapKey } from "./types/GTypes/maps";
-import { BetterUXWrapper } from "./types/GTypes/utils";
-
-export type CharacterWithEventsFunctions = Pick<
+type CharacterWithEventsFunctions = Pick<
   TypedEventEmitter<CharacterEvents>,
   "on" | "once" | "off"
 > & {
@@ -16,7 +9,7 @@ export type CharacterWithEventsFunctions = Pick<
   all(callback?: (name: any, data: any) => void): void;
 };
 
-export interface LootEvent {
+interface LootEvent {
   id: string;
 
   /** Character who opened the chest */
@@ -42,7 +35,7 @@ export interface LootEvent {
   items: Array<LootedItem>;
 }
 
-export interface SellEvent {
+interface SellEvent {
   success: boolean;
   response: string;
   place: string;
@@ -53,7 +46,7 @@ export interface SellEvent {
   gold: number;
 }
 
-export interface BuyEvent {
+interface BuyEvent {
   name: ItemKey;
 
   /** Inventory slot */
@@ -66,7 +59,7 @@ export interface BuyEvent {
   cost: number;
 }
 
-export type GoldSentEvent =
+type GoldSentEvent =
   | {
       /** Receiver Name */
       to: string;
@@ -82,7 +75,7 @@ export type GoldSentEvent =
       gold: number;
     };
 
-export type GoldReceivedEvent =
+type GoldReceivedEvent =
   | {
       /** Sender Name */
       from: string;
@@ -97,7 +90,7 @@ export type GoldReceivedEvent =
       gold: number;
     };
 
-export interface LootedItem {
+interface LootedItem {
   name: ItemKey;
 
   /** Name of the character the item is for */
@@ -113,7 +106,7 @@ export interface LootedItem {
   pvp_loot?: boolean;
 }
 
-export interface HitData {
+interface HitData {
   /** Can be positive or negative */
   source: string;
 
@@ -179,7 +172,7 @@ export interface HitData {
   // Not all properties are always set, if the value is false, [] or 0 - they are usually not set
 }
 
-export interface CharacterEvents {
+interface CharacterEvents {
   death: {
     /** True when your code executes with a dead character */
     past: boolean;

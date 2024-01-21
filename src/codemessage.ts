@@ -1,4 +1,4 @@
-export type CodeMessageEvent<T> = {
+type CodeMessageEvent<T> = {
   /** The name of the character who sent the message */
   name: string;
   /** The message sent */

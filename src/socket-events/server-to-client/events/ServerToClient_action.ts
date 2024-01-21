@@ -1,6 +1,4 @@
-import { ConditionKey, ProjectileKey, SkillKey } from "../../../G";
-
-export type ServerToClient_action_base = {
+type ServerToClient_action_base = {
   attacker: string;
   conditions?: Array<ConditionKey>;
   damage?: number;
@@ -15,12 +13,12 @@ export type ServerToClient_action_base = {
   y: number;
 };
 
-export type ServerToClient_action_projectile = ServerToClient_action_base & {
+type ServerToClient_action_projectile = ServerToClient_action_base & {
   projectile: ProjectileKey;
 };
 
-export type ServerToClient_action_ray = ServerToClient_action_base & {
+type ServerToClient_action_ray = ServerToClient_action_base & {
   instant: boolean;
 };
 
-export type ServerToClient_action = ServerToClient_action_projectile | ServerToClient_action_ray;
+type ServerToClient_action = ServerToClient_action_projectile | ServerToClient_action_ray;

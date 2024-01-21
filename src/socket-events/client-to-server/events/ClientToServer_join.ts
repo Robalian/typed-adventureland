@@ -1,3 +1,3 @@
-export type ClientToServer_join = {
+type ClientToServer_join = {
   name: string;
 };

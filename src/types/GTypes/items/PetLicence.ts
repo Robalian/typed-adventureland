@@ -1,6 +1,6 @@
-export type PetLicenceKey = "puppyer"; // Licence to Adopt a Puppy
+type PetLicenceKey = "puppyer"; // Licence to Adopt a Puppy
 
-export interface GPetLicence {
+interface GPetLicence {
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

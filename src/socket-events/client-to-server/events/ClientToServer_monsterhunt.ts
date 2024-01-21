@@ -1,1 +1,1 @@
-export type ClientToServer_monsterhunt = void;
+type ClientToServer_monsterhunt = void;

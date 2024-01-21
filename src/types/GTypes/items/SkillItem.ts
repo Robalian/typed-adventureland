@@ -1,8 +1,8 @@
-export type SkillItemKey =
+type SkillItemKey =
   | "poison" // Poison Sack
   | "shadowstone"; // Shadow Stone
 
-export interface GSkillItem {
+interface GSkillItem {
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

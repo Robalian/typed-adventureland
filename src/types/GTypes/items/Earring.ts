@@ -1,6 +1,4 @@
-import type { SetKey } from "../sets/Sets";
-
-export type EarringKey =
+type EarringKey =
   | "cearring" // Earring of The Crypt
   | "dexearring" // Earring of Dexterity
   | "dexearringx" // Enchanted Earring
@@ -11,7 +9,7 @@ export type EarringKey =
   | "strearring" // Earring of Strength
   | "vitearring"; // Earring of Vitality
 
-export interface GEarring {
+interface GEarring {
   a?: boolean;
   apiercing?: number;
   /** Contains information about what stats the item will gain with each compound level. Set if the item is compoundable. */

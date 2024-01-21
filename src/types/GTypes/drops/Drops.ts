@@ -1,8 +1,4 @@
-import type { ItemKey } from "../items/index";
-import { MapKey } from "../maps";
-import { MonsterKey } from "../monsters";
-
-export type GDropNormalKey =
+type GDropNormalKey =
   | "5bucks"
   | "abtesting"
   | "abtesting_loser"
@@ -68,7 +64,7 @@ export type GDropNormalKey =
   | "xN"
   | "xbox";
 
-export type GDropsOpened =
+type GDropsOpened =
   | "armorbox"
   | "armorx"
   | "basicelixir"
@@ -85,20 +81,20 @@ export type GDropsOpened =
   | "weaponofthedead"
   | "xN";
 
-export type GDropSimple = [weight: number, item: ItemKey];
-export type GDropGold = [weight: number, type: "gold", amount: number];
-export type GDropOpenBox = [weight: number, type: "open", container: GDropsOpened];
-export type GDropCX = [weight: number, type: "cx" | "cxbundle", cosmetic: string];
-export type GDropShells = [weight: number, type: "5bucks" | "shells", amount: number];
+type GDropSimple = [weight: number, item: ItemKey];
+type GDropGold = [weight: number, type: "gold", amount: number];
+type GDropOpenBox = [weight: number, type: "open", container: GDropsOpened];
+type GDropCX = [weight: number, type: "cx" | "cxbundle", cosmetic: string];
+type GDropShells = [weight: number, type: "5bucks" | "shells", amount: number];
 
-export type GDropList = Array<GDropSimple | GDropGold | GDropOpenBox | GDropCX | GDropShells>;
+type GDropList = Array<GDropSimple | GDropGold | GDropOpenBox | GDropCX | GDropShells>;
 
-export type GDropMonsters = Partial<Record<MonsterKey, GDropList>>;
-export type GDropMaps = Partial<Record<MapKey | "global" | "global_static", GDropList>>;
+type GDropMonsters = Partial<Record<MonsterKey, GDropList>>;
+type GDropMaps = Partial<Record<MapKey | "global" | "global_static", GDropList>>;
 
-export type GDropNormalDrops = Record<GDropNormalKey, GDropList>;
+type GDropNormalDrops = Record<GDropNormalKey, GDropList>;
 
-export type GDrops = GDropNormalDrops & {
+type GDrops = GDropNormalDrops & {
   gold: {
     random: number;
     x10: number;

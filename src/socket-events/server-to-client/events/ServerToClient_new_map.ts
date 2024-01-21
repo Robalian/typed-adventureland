@@ -1,7 +1,4 @@
-import { MapKey } from "../../../G";
-import type { ServerToClient_entities } from "./ServerToClient_entities";
-
-export type ServerToClient_new_map_map_infos =
+type ServerToClient_new_map_map_infos =
   | {
       dice: "bets" | "roll" | "lock";
       num?: string;
@@ -9,7 +6,7 @@ export type ServerToClient_new_map_map_infos =
     }
   | Record<string, never>;
 
-export type ServerToClient_new_map = {
+type ServerToClient_new_map = {
   direction: number;
   effect: number | "blink" | "magiport";
   entities: ServerToClient_entities;

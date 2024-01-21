@@ -1,1 +1,1 @@
-export type ServerToClient_code_eval = string;
+type ServerToClient_code_eval = string;

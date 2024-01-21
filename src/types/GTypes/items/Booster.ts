@@ -1,9 +1,9 @@
-export type BoosterKey =
+type BoosterKey =
   | "goldbooster" // Gold Booster
   | "luckbooster" // Luck Booster
   | "xpbooster"; // XP Booster
 
-export interface GBooster {
+interface GBooster {
   /** Contains information about what stats the item will gain with each compound level. Set if the item is compoundable. */
   compound: {
     gold?: number;

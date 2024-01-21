@@ -1,4 +1,4 @@
-export type MultiplierKey =
+type MultiplierKey =
   | "buy_to_sell"
   | "extra_shells"
   | "lostandfound_mult"
@@ -6,4 +6,4 @@ export type MultiplierKey =
   | "secondhands_mult"
   | "shells_to_gold";
 
-export type GMultiplier = number;
+type GMultiplier = number;

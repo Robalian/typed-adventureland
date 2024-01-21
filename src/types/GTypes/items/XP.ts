@@ -1,8 +1,6 @@
-import type { ItemType } from "./index";
+type XPKey = "bottleofxp"; // Bottle of XP
 
-export type XPKey = "bottleofxp"; // Bottle of XP
-
-export interface GXP {
+interface GXP {
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

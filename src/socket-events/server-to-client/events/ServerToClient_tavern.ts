@@ -1,4 +1,4 @@
-export type ServerToClient_tavern = {
+type ServerToClient_tavern = {
   event: "lost" | "won" | "bet";
   name: string;
   type: "dice";

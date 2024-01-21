@@ -1,7 +1,4 @@
-import type { ClassKey } from "../classes/Classes";
-import type { SetKey } from "../sets/Sets";
-
-export type PantKey =
+type PantKey =
   | "fallen" // Pants of the Fallen Master
   | "frankypants" // Franky Pants
   | "hpants" // Heavy Underarmor
@@ -18,7 +15,7 @@ export type PantKey =
   | "xmaspants" // Xmas Pants
   | "xpants"; // Darkforge Underarmor
 
-export interface GPant {
+interface GPant {
   a?: boolean | number;
   armor: number;
   /** An array of classes that can use this item. */

@@ -1,8 +1,4 @@
-import { TradeSlotType } from "../../../entity";
-import { ItemKey } from "../../../G";
-import { ItemInfo } from "../../../items";
-
-export type ServerToClient_ui_buy_sell = {
+type ServerToClient_ui_buy_sell = {
   type: "-$" | "+$";
   id: string | "basics" | "scrolls";
   name: string;
@@ -13,7 +9,7 @@ export type ServerToClient_ui_buy_sell = {
   num?: string;
 };
 
-export type ServerToClient_ui_trade = {
+type ServerToClient_ui_trade = {
   type: "+$$";
   seller: string;
   buyer: string;
@@ -23,7 +19,7 @@ export type ServerToClient_ui_trade = {
   snum: number;
 };
 
-export type ServerToClient_ui_fishing_mining = {
+type ServerToClient_ui_fishing_mining = {
   type:
     | "fishing_fail"
     | "fishing_none"
@@ -35,30 +31,30 @@ export type ServerToClient_ui_fishing_mining = {
   direction?: number;
 };
 
-export type ServerToClient_ui_massproduction = {
+type ServerToClient_ui_massproduction = {
   type: "massproduction";
   name: string;
 };
 
-export type ServerToClient_ui_mluck = {
+type ServerToClient_ui_mluck = {
   type: "mluck";
   from: string;
   to: string;
 };
 
-export type ServerToClient_ui_rspeed = {
+type ServerToClient_ui_rspeed = {
   type: "rspeed";
   from: string;
   to: string;
 };
 
-export type ServerToClient_ui_aoe = {
+type ServerToClient_ui_aoe = {
   type: "stomp" | "agitate" | "scare";
   name: string;
   ids: Array<string>;
 };
 
-export type ServerToClient_ui =
+type ServerToClient_ui =
   | ServerToClient_ui_buy_sell
   | ServerToClient_ui_trade
   | ServerToClient_ui_fishing_mining

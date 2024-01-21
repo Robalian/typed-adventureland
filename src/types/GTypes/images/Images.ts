@@ -1,4 +1,4 @@
-export type ImageKey =
+type ImageKey =
   | "/images/all_characters/lchar1.png"
   | "/images/all_characters/mchar16.png"
   | "/images/all_characters/schar7.png"
@@ -208,7 +208,7 @@ export type ImageKey =
   | "/images/tiles/monsters/tinyfairies.png"
   | "/images/tiles/monsters/vampire2d.png";
 
-export interface GImage {
+interface GImage {
   width: number;
   type: string;
   height: number;

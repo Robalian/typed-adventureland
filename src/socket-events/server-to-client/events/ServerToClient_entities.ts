@@ -1,13 +1,4 @@
-import { EntityChannelInfos } from "../../../entities/base-entity";
-import {
-  CharacterEntityCXInfos,
-  CharacterEntityQInfos,
-  CharacterEntitySlotsInfos,
-} from "../../../entities/character-entity";
-import { StatusInfo } from "../../../entities/status-info";
-import { ClassKey, MapKey, MonsterKey, NpcKey } from "../../../G";
-
-export type ServerToClient_entities_players = {
+type ServerToClient_entities_players = {
   id: string;
   ctype: ClassKey | NpcKey;
 
@@ -61,7 +52,7 @@ export type ServerToClient_entities_players = {
   xp?: number;
 };
 
-export type ServerToClient_entities_monsters = {
+type ServerToClient_entities_monsters = {
   id: string;
   type: MonsterKey;
 
@@ -92,7 +83,7 @@ export type ServerToClient_entities_monsters = {
   xp?: number;
 };
 
-export type ServerToClient_entities = {
+type ServerToClient_entities = {
   type: "all" | "xy";
   in: string;
   map: MapKey;

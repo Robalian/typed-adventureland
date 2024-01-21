@@ -1,6 +1,4 @@
-import { ClassKey, MapKey } from "../../../G";
-
-export type ServerToClient_players = Array<{
+type ServerToClient_players = Array<{
   /** Are they AFK? */
   afk: number;
 

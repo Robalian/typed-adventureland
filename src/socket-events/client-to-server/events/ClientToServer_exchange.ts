@@ -1,4 +1,4 @@
-export type ClientToServer_exchange = {
+type ClientToServer_exchange = {
   item_num: number;
   q?: number;
 };

@@ -1,7 +1,4 @@
-import type { ClassKey } from "../classes/Classes";
-import type { SetKey } from "../sets/Sets";
-
-export type HelmetKey =
+type HelmetKey =
   | "bunnyears" // Legacy Bunny Ears
   | "cyber" // Cybernetic Implants
   | "eears" // Bunny Ears
@@ -28,7 +25,7 @@ export type HelmetKey =
   | "xhelmet" // Darkforge Helmet
   | "xmashat"; // Xmas Hat
 
-export interface GHelmet {
+interface GHelmet {
   a?: number | boolean;
   apiercing?: number;
   armor?: number;

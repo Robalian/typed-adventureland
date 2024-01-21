@@ -1,33 +1,4 @@
-import type { AchievementKey, GAchievement } from "./achievements";
-import type { AnimationKey, GAnimation } from "./animations";
-import type { ClassKey, GClass } from "./classes";
-import type { ConditionKey, GCondition } from "./conditions";
-import type { GCosmetic } from "./cosmetics";
-import type { GCrafts } from "./craft";
-import type { DimensionKey, GDimension } from "./dimensions";
-import type { DismantleKey, GDismantle } from "./dismantle";
-import type { EmotionKey, GEmotion } from "./emotions";
-import type { EventKey, GEvent } from "./events";
-import type { GameKey, GGame } from "./games";
-import type { GDrops } from "./drops";
-import type { GeometryKey, GGeometry } from "./geometry";
-import type { ImageKey, GImage } from "./images";
-import type { ImagesetKey, GImageset } from "./imagesets";
-import type { ItemKey, GItem } from "./items";
-import type { LevelKey, GLevel } from "./levels";
-import type { MapKey, GMap } from "./maps";
-import type { MonsterKey, GMonster } from "./monsters";
-import type { MultiplierKey, GMultiplier } from "./multipliers";
-import type { NpcKey, GNpc } from "./npcs";
-import type { ProjectileKey, GProjectile } from "./projectiles";
-import type { SetKey, GSet } from "./sets";
-import type { SkillKey, GSkill } from "./skills";
-import type { SpriteKey, GSprite } from "./sprites";
-import type { TilesetKey, GTileset } from "./tilesets";
-import type { TitleKey, GTitle } from "./titles";
-import type { TokenKey, GToken } from "./tokens";
-
-export type GData = {
+type GData = {
   achievements: Record<AchievementKey, GAchievement>;
   animations: Record<AnimationKey, GAnimation>;
   classes: Record<ClassKey, GClass>;
@@ -61,32 +32,3 @@ export type GData = {
   /** base_gold is attached to the G object from `socket.on('start'` in `game.js` */
   base_gold: Record<MonsterKey, Partial<Record<MapKey, number>>>;
 };
-
-export * from "./achievements";
-export * from "./animations";
-export * from "./classes";
-export * from "./conditions";
-export * from "./cosmetics";
-export * from "./craft";
-export * from "./dimensions";
-export * from "./dismantle";
-export * from "./drops";
-export * from "./emotions";
-export * from "./events";
-export * from "./games";
-export * from "./geometry";
-export * from "./images";
-export * from "./imagesets";
-export * from "./items";
-export * from "./levels";
-export * from "./maps";
-export * from "./monsters";
-export * from "./multipliers";
-export * from "./npcs";
-export * from "./projectiles";
-export * from "./sets";
-export * from "./skills";
-export * from "./sprites";
-export * from "./tilesets";
-export * from "./titles";
-export * from "./tokens";

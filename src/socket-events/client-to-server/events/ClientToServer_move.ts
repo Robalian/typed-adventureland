@@ -1,4 +1,4 @@
-export type ClientToServer_move =
+type ClientToServer_move =
   | {
       going_x: number;
       going_y: number;

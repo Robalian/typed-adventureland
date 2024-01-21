@@ -1,9 +1,6 @@
-import type { Tuple } from "../utils";
-import { ItemKey } from "../items";
+type GameKey = "dice" | "slots" | "tarot" | "wheel";
 
-export type GameKey = "dice" | "slots" | "tarot" | "wheel";
-
-export interface GGame {
+interface GGame {
   gold?: number;
   slices?: Array<[string, "gold", number, string] | [string, "item", ItemKey, string]>;
   cards?: Tuple<string, 78>;

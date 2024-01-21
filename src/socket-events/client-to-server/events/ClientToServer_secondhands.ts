@@ -1,1 +1,1 @@
-export type ClientToServer_secondhands = void;
+type ClientToServer_secondhands = void;

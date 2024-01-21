@@ -1,18 +1,4 @@
-import { CharacterBankInfos } from "../../../character";
-import { EntityChannelInfos } from "../../../entities/base-entity";
-import {
-  CharacterEntity,
-  CharacterEntityCXInfos,
-  CharacterEntityQInfos,
-  CharacterEntitySlotsInfos,
-} from "../../../entities/character-entity";
-import { StatusInfo } from "../../../entities/status-info";
-import { ClassKey, EmotionKey, MapKey } from "../../../G";
-import { ItemInfo } from "../../../items";
-import { ServerToClient_eval } from "./ServerToClient_eval";
-import { ServerToClient_game_response } from "./ServerToClient_game_response";
-
-export type ServerToClient_player = CharacterEntity & {
+type ServerToClient_player = CharacterEntity & {
   hp: number;
   max_hp: number;
   mp: number;

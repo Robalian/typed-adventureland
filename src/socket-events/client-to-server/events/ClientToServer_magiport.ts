@@ -1,3 +1,3 @@
-export type ClientToServer_magiport = {
+type ClientToServer_magiport = {
   name: string;
 };

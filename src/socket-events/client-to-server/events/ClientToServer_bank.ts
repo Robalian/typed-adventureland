@@ -1,6 +1,4 @@
-import { BankPackType } from "../../../bank";
-
-export type ClientToServer_bank =
+type ClientToServer_bank =
   | {
       amount: number;
       operation: "deposit" | "withdraw";

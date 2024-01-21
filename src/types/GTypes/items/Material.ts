@@ -1,4 +1,4 @@
-export type MaterialKey =
+type MaterialKey =
   | "ascale" // Armadillo Scale
   | "bandages" // Bandages
   | "bcandle" // Burning Candle
@@ -57,7 +57,7 @@ export type MaterialKey =
   | "watercore" // Water Core
   | "whiteegg"; // White Egg
 
-export interface GMaterial {
+interface GMaterial {
   action?: string;
   event?: boolean;
   explanation?: string;

@@ -1,6 +1,4 @@
-import type { SetKey } from "../sets/Sets";
-
-export type ShieldKey =
+type ShieldKey =
   | "mshield" // Shield M
   | "shield" // Shield
   | "sshield" // Spiked Shield
@@ -8,7 +6,7 @@ export type ShieldKey =
   | "wshield" // Wooden Shield
   | "xshield"; // Shield X
 
-export interface GShield {
+interface GShield {
   armor?: number;
   crit?: number;
   cx?: {

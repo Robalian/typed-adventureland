@@ -1,4 +1,4 @@
-export interface GCosmetic {
+interface GCosmetic {
   default_beard_position: number;
   default_face_position: number;
   default_hair_place: number;

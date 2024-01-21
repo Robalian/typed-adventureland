@@ -1,6 +1,6 @@
-export type TomeKey = "xptome"; // Tome of Protection
+type TomeKey = "xptome"; // Tome of Protection
 
-export interface GTome {
+interface GTome {
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

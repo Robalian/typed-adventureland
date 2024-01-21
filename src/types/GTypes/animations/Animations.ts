@@ -1,4 +1,4 @@
-export type AnimationKey =
+type AnimationKey =
   | "acid"
   | "arrow_hit"
   | "arrow1"
@@ -81,7 +81,7 @@ export type AnimationKey =
   | "wandy"
   | "wslash";
 
-export interface GAnimation {
+interface GAnimation {
   frames: number;
   file: string;
   alpha?: number;

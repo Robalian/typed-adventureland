@@ -1,6 +1,4 @@
-import type { SetKey } from "../sets/Sets";
-
-export type OrbKey =
+type OrbKey =
   | "charmer" // Charmer
   | "ftrinket" // Trinket of Faith
   | "jacko" // Jack-o Lantern
@@ -17,7 +15,7 @@ export type OrbKey =
   | "tigerstone" // Tiger Stone
   | "vorb"; // Vampiric Canine Teeth
 
-export interface GOrb {
+interface GOrb {
   a?: boolean;
   ability?: string;
   armor?: number;

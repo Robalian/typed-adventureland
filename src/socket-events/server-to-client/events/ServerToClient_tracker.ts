@@ -1,3 +1,1 @@
-import { Tracker } from "../../../parent";
-
-export type ServerToClient_tracker = Tracker;
+type ServerToClient_tracker = Tracker;

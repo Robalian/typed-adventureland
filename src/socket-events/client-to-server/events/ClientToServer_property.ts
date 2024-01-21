@@ -1,3 +1,3 @@
-export type ClientToServer_property = {
+type ClientToServer_property = {
   typing: boolean;
 };

@@ -1,6 +1,4 @@
-import type { SetKey } from "../sets/Sets";
-
-export type AmuletKey =
+type AmuletKey =
   | "amuletofm" // Amulet of Mystery
   | "bfangamulet" // Ghastly Bat Fang
   | "dexamulet" // Amulet of Dexterity
@@ -18,7 +16,7 @@ export type AmuletKey =
   | "t2stramulet" // Amulet of the Eager Warrior
   | "warmscarf"; // Warm Scarf
 
-export interface GAmulet {
+interface GAmulet {
   a?: boolean;
   apiercing?: number;
   armor?: number;

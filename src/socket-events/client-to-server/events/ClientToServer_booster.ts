@@ -1,4 +1,4 @@
-export type ClientToServer_booster = {
+type ClientToServer_booster = {
   action: "shift";
   num: number;
   to: string;

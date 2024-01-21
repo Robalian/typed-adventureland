@@ -1,15 +1,10 @@
-import { SlotType } from "../../../entity";
-import { ItemKey, MonsterKey, SkillKey } from "../../../G";
-import { ItemInfo } from "../../../items";
-import { ServerToClient_action_projectile } from "./ServerToClient_action";
-
-export type AttackFailedGRDataObject = {
+type AttackFailedGRDataObject = {
   response: "attack_failed";
   place: "attack";
   id: string;
 };
 
-export type BankOperationGRDataObject = {
+type BankOperationGRDataObject = {
   response: "data" | "storage_full" | "bank_unavailable";
   place: "bank";
   gold?: number;
@@ -19,19 +14,19 @@ export type BankOperationGRDataObject = {
 };
 
 /** When you try to enter the bank, but another one of your characters is already inside. */
-export type BankOPXGRDataObject = {
+type BankOPXGRDataObject = {
   response: "bank_opx";
   /** The character that is already inside */
   name: string;
   reason: "mounted";
 };
 
-export type BankRestrictionsGRDataObject = {
+type BankRestrictionsGRDataObject = {
   response: "bank_restrictions";
   place: string;
 };
 
-export type BuySuccessGRDataObject = {
+type BuySuccessGRDataObject = {
   cevent: "buy";
   response: "buy_success";
   success: boolean;
@@ -44,7 +39,7 @@ export type BuySuccessGRDataObject = {
   q: number;
 };
 
-export type CooldownGRDataObject = {
+type CooldownGRDataObject = {
   response: "cooldown";
   failed: true;
   skill?: SkillKey;
@@ -53,19 +48,19 @@ export type CooldownGRDataObject = {
   ms: number;
 };
 
-export type CraftGRDataObject = {
+type CraftGRDataObject = {
   response: "craft";
   name: ItemKey;
 };
 
-export type SkillSuccessGRDataObject = {
+type SkillSuccessGRDataObject = {
   response: "data";
   place: Exclude<SkillKey, "attack" | "taunt" | "heal" | "curse" | "supershot">;
   success: boolean;
   in_progress?: true;
 };
 
-export type ProjectileSkillGRDataObject = {
+type ProjectileSkillGRDataObject = {
   response: "data";
   place: Extract<SkillKey, "attack" | "taunt" | "heal" | "curse" | "supershot">;
   dist?: number;
@@ -74,18 +69,18 @@ export type ProjectileSkillGRDataObject = {
   id?: string;
 } & Partial<ServerToClient_action_projectile>;
 
-export type DefeatedByMonsterGRDataObject = {
+type DefeatedByMonsterGRDataObject = {
   response: "defeated_by_a_monster";
   xp: number;
   monster: MonsterKey;
 };
 
-export type DisabledGRDataObject = {
+type DisabledGRDataObject = {
   response: "disabled";
   place: SkillKey;
 };
 
-export type DismantleGRDataObject = {
+type DismantleGRDataObject = {
   response: "dismantle";
   /** TODO: Name of item dismantled or name of item received? */
   name: ItemKey;
@@ -95,35 +90,35 @@ export type DismantleGRDataObject = {
  * donation < 100k ➡️ low
  * 100k <= donation < 1m ➡️ gum
  * donation >= 1m ➡️ ability to see lost and found */
-export type DonateGRDataObject = {
+type DonateGRDataObject = {
   response: "donate_gum" | "donate_low" | "donate_thx";
   gold: number;
   xprate: number;
 };
 
 /** Called when a condition expires */
-export type CondExpGRDataObject = {
+type CondExpGRDataObject = {
   response: "ex_condition";
   name: SkillKey;
 };
 
-export type GetCloserGRDataObject = {
+type GetCloserGRDataObject = {
   response: "get_closer";
   place: "upgrade";
 };
 
-export type GoldSentGRDataObject = {
+type GoldSentGRDataObject = {
   response: "gold_sent";
   name: string;
   gold: number;
 };
 
-export type ItemLockedGRDataObject = {
+type ItemLockedGRDataObject = {
   response: "item_locked";
   place: "upgrade";
 };
 
-export type ItemSentGRDataObject = {
+type ItemSentGRDataObject = {
   response: "item_sent";
   name: string;
   item: ItemKey;
@@ -131,60 +126,60 @@ export type ItemSentGRDataObject = {
   q: number;
 };
 
-export type LostFoundInfoGRDataObject = {
+type LostFoundInfoGRDataObject = {
   response: "lostandfound_info";
   gold: number;
 };
 
-export type MagiportGRDataObject = {
+type MagiportGRDataObject = {
   response: "magiport_failed" | "magiport_sent";
   id: string;
 };
 
-export type TakeMailItemGRDataObject = {
+type TakeMailItemGRDataObject = {
   response: "mail_item_taken";
 };
 
-export type NoMPGRDataObject = {
+type NoMPGRDataObject = {
   response: "no_mp";
   place: SkillKey;
   failed: true;
 };
 
-export type NoItemGRDataObject = {
+type NoItemGRDataObject = {
   response: "no_item";
   place: "upgrade" | "compound";
   failed: true;
 };
 
-export type NoTargetGRDataObject = {
+type NoTargetGRDataObject = {
   response: "no_target";
   /** TODO: See what else gets returned */
 };
 
-export type SeashellGRDataObject = {
+type SeashellGRDataObject = {
   response: "seashell_success";
   suffix: string | "";
 };
 
-export type SkillStatusGRDataObject = {
+type SkillStatusGRDataObject = {
   response: "skill_fail" | "skill_success";
   name: SkillKey;
 };
 
-export type TargetLockGRDataObject = {
+type TargetLockGRDataObject = {
   response: "target_lock";
   monster: MonsterKey;
 };
 
-export type TooFarGRDataObject = {
+type TooFarGRDataObject = {
   response: "too_far";
   place: SkillKey;
   id: string;
   dist: number;
 };
 
-export type TownGRDataObject =
+type TownGRDataObject =
   | {
       success: false;
       in_progress: true;
@@ -197,7 +192,7 @@ export type TownGRDataObject =
       place: "town";
     };
 
-export type TransportGRDataObject =
+type TransportGRDataObject =
   | {
       success: true;
       response: "data";
@@ -209,21 +204,21 @@ export type TransportGRDataObject =
       place: "transport";
     };
 
-export type UnfriendFailedGRDataObject = {
+type UnfriendFailedGRDataObject = {
   response: "unfriend_failed";
   reason: "bank" | "coms failure" | "nouser";
 };
 
-export type GoldReceivedGRDataObject = {
+type GoldReceivedGRDataObject = {
   /** TODO: Separate these into separate objects */
   response: "gold_received" | "item_placeholder" | "item_received";
   gold: number;
   name: string;
 };
 
-export type EquipGRDataObject = EquipSuccessGRDataObject | EquipFailedGRDataObject;
+type EquipGRDataObject = EquipSuccessGRDataObject | EquipFailedGRDataObject;
 
-export type EquipSuccessGRDataObject = {
+type EquipSuccessGRDataObject = {
   response: "data";
   place: "equip";
   success: true;
@@ -231,19 +226,19 @@ export type EquipSuccessGRDataObject = {
   num: number;
 };
 
-export type EquipFailedGRDataObject = {
+type EquipFailedGRDataObject = {
   response: "cant_equip";
   place: "equip";
   failed: true;
 };
 
-export type ExchangeNotEnoughGRDataObject = {
+type ExchangeNotEnoughGRDataObject = {
   response: "exchange_notenough";
   place: "exchange_buy";
   failed: true;
 };
 
-export type UpgradeCompoundGRDataObject = {
+type UpgradeCompoundGRDataObject = {
   response: "upgrade_success" | "upgrade_fail" | "compound_success" | "compound_fail";
   /** the level attempted */
   level: number;
@@ -251,7 +246,7 @@ export type UpgradeCompoundGRDataObject = {
   num: number;
 };
 
-export type GameResponseDataObject =
+type GameResponseDataObject =
   | AttackFailedGRDataObject
   | BankOPXGRDataObject
   | BankRestrictionsGRDataObject
@@ -288,7 +283,7 @@ export type GameResponseDataObject =
   | UpgradeCompoundGRDataObject
   | BankOperationGRDataObject;
 
-export type GameResponseDataString =
+type GameResponseDataString =
   | "bank_restrictions"
   /** When you attempt to place a bet while after you drank an xshot */
   | "bet_xshot"
@@ -379,7 +374,7 @@ export type GameResponseDataString =
   /** We are trying to use an offering that is not high enough grade to upgrade our item */
   | "upgrade_invalid_offering";
 
-export type GameResponseDataUpgradeChance = {
+type GameResponseDataUpgradeChance = {
   response: "compound_chance" | "upgrade_chance";
 
   /** The chance for a success */
@@ -398,7 +393,7 @@ export type GameResponseDataUpgradeChance = {
   grace: number;
 };
 
-export type ServerToClient_game_response =
+type ServerToClient_game_response =
   | GameResponseDataObject
   | GameResponseDataString
   | GameResponseDataUpgradeChance;

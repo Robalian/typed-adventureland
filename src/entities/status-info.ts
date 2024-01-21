@@ -1,13 +1,9 @@
-import { ConditionKey } from "../types/GTypes/conditions";
-import { MapKey } from "../types/GTypes/maps";
-import { MonsterKey } from "../types/GTypes/monsters";
-
-export type StatusInfoBase = {
+type StatusInfoBase = {
   /** How many ms left before this condition expires */
   ms: number;
 };
 
-export type MonsterHuntStatusInfo = {
+type MonsterHuntStatusInfo = {
   /** Number of monsters remaining to kill */
   c: number;
   dl: boolean;
@@ -18,7 +14,7 @@ export type MonsterHuntStatusInfo = {
   sn: string;
 };
 
-export type StatusInfo = {
+type StatusInfo = {
   [T in ConditionKey]?: StatusInfoBase;
 } & {
   blink?: {

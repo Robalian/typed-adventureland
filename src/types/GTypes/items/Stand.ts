@@ -1,8 +1,8 @@
-export type StandKey =
+type StandKey =
   | "stand0" // Merchant Stand
   | "stand1"; // Merchant Stand [Sell+Buy]
 
-export interface GStand {
+interface GStand {
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

@@ -1,18 +1,14 @@
-import { ElixirKey, ItemKey } from "./types/GTypes/items";
+/**
+ * Returns the grade of an item.
+ * 0 = normal, 1 = high, 2 = rare, 3 = legendary, 4 = exalted
+ */
+declare function item_grade(item: ItemInfo | { name: ItemKey }): -1 | 0 | 1 | 2 | 3 | 4;
 
-declare global {
-  /**
-   * Returns the grade of an item.
-   * 0 = normal, 1 = high, 2 = rare, 3 = legendary, 4 = exalted
-   */
-  function item_grade(item: ItemInfo | { name: ItemKey }): -1 | 0 | 1 | 2 | 3 | 4;
+/** Returns the inventory position of the item, or -1 if it's not found */
+declare function locate_item(item: ItemKey): number; // should this live in "inventory"?
 
-  /** Returns the inventory position of the item, or -1 if it's not found */
-  function locate_item(item: ItemKey): number; // should this live in "inventory"?
-}
-
-export type HealthPotion = "hpot0" | "hpot1" | "hpotx";
-export type ManaPotion = "mpot0" | "mpot1" | "mpotx";
+type HealthPotion = "hpot0" | "hpot1" | "hpotx";
+type ManaPotion = "mpot0" | "mpot1" | "mpotx";
 
 // TODO: each category should have its own type
 
@@ -20,7 +16,7 @@ export type ManaPotion = "mpot0" | "mpot1" | "mpotx";
 
 // gift is an item we got gifted from the start, gifts can only be sold for 1 gold, if you add items to a gift stack, they also becomes gifts.
 
-export type ItemInfoPValues =
+type ItemInfoPValues =
   | "festive"
   | "firehazard"
   | "glitched"
@@ -31,7 +27,7 @@ export type ItemInfoPValues =
   | "superfast";
 
 /** The item instance used different places, your inventory, merchant stand, bank and other places */
-export type ItemInfo = {
+type ItemInfo = {
   acc?: number;
   ach?: string; // TODO: achievement from G.achievements?
   charges?: number; // only seen on chests
@@ -92,17 +88,17 @@ export type ItemInfo = {
   v?: string;
 };
 
-export type EquippedElixirItemInfo = {
+type EquippedElixirItemInfo = {
   name: ElixirKey;
   ex?: boolean; // on elixirs, not optional, unsure of what the value indicates
   expires?: string; // on elixirs, not optional, when the elixir expires.
 };
 
-export type InventoryExchangeItemInfo = {
+type InventoryExchangeItemInfo = {
   name: "placeholder";
 };
 
-export type InventoryUpgradeCompoundItemInfo = ItemInfo & {
+type InventoryUpgradeCompoundItemInfo = ItemInfo & {
   name: "placeholder";
 
   /**
@@ -117,7 +113,7 @@ export type InventoryUpgradeCompoundItemInfo = ItemInfo & {
   };
 };
 
-export type TradeItemInfo = ItemInfo & {
+type TradeItemInfo = ItemInfo & {
   /** If true, the entity is buying this item */
   b?: boolean;
 
@@ -135,7 +131,7 @@ export type TradeItemInfo = ItemInfo & {
 };
 
 // TODO: Get all stat types
-export type StatType =
+type StatType =
   | "armor"
   | "attack"
   | "dex"

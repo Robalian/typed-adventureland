@@ -1,4 +1,4 @@
-export type MiscKey =
+type MiscKey =
   | "5bucks" // Old Paper Money
   | "coal" // Coal
   | "glitch" // A Glitch
@@ -8,7 +8,7 @@ export type MiscKey =
   | "storagebox" // Storage Box
   | "troll"; // T-Shirt Roll
 
-export interface GMisc {
+interface GMisc {
   a?: boolean;
   /** Contains information about what stats the item will gain with each compound level. Set if the item is compoundable. */
   compound?: {};

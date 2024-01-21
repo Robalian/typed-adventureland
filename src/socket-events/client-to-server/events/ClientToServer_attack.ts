@@ -1,3 +1,3 @@
-export type ClientToServer_attack = {
+type ClientToServer_attack = {
   id: string;
 };

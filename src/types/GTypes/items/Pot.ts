@@ -1,4 +1,4 @@
-export type PotKey =
+type PotKey =
   | "hpot0" // HP Potion
   | "hpot1" // HP Potion
   | "hpotx" // Super HP Potion
@@ -7,7 +7,7 @@ export type PotKey =
   | "mpotx" // Super MP Potion
   | "snakeoil"; // Snake Oil
 
-export interface GPot {
+interface GPot {
   cooldown?: number;
   debuff?: boolean;
   /** Cost of the item in gold, if an NPC were to sell this item. */

@@ -1,3 +1,3 @@
-export type ClientToServer_heal = {
+type ClientToServer_heal = {
   id: string;
 };

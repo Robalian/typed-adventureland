@@ -1,3 +1,3 @@
-export type ClientToServer_eval = {
+type ClientToServer_eval = {
   command: string;
 };

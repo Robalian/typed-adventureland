@@ -1,4 +1,4 @@
-export type ClientToServer_party =
+type ClientToServer_party =
   | {
       event: "accept" | "invite" | "kick" | "raccept" | "request";
       name: string;

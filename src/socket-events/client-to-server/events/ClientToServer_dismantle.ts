@@ -1,4 +1,4 @@
-export type ClientToServer_dismantle = {
+type ClientToServer_dismantle = {
   /** Inventory slot to dismantle */
   num: number;
 };

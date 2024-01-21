@@ -1,7 +1,4 @@
-import { MapKey } from "../types/GTypes/maps";
-import { StatusInfo } from "./status-info";
-
-export type EntityChannelInfos = {
+type EntityChannelInfos = {
   pickpocket?: {
     ms: number;
     target: string;
@@ -23,7 +20,7 @@ export type EntityChannelInfos = {
   };
 };
 
-export interface EntityBase {
+interface EntityBase {
   a_angle?: number;
   a_direction: number;
   abs?: boolean;

@@ -1,9 +1,4 @@
-import type { ClassKey } from "../classes/Classes";
-import type { ProjectileKey } from "../projectiles/Projectiles";
-import type { SetKey } from "../sets/Sets";
-import type { WeaponType } from "./index";
-
-export type WeaponKey =
+type WeaponKey =
   | "axe3" // T3 Axe
   | "basher" // Basher
   | "bataxe" // Ghastly Battle Axe
@@ -80,7 +75,7 @@ export type WeaponKey =
   | "woodensword" // Wooden Sword
   | "xmace"; // Merry Mace
 
-export interface GWeapon {
+interface GWeapon {
   a?: boolean | number;
   ability?: string;
   apiercing?: number;

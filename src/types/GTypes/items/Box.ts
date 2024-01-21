@@ -1,11 +1,11 @@
-export type BoxKey =
+type BoxKey =
   | "apologybox" // Apology Box
   | "armorbox" // Armor Box
   | "bugbountybox" // Bug Bounty Box
   | "jewellerybox" // Jewellery Box
   | "weaponbox"; // Weapon Box
 
-export interface GBox {
+interface GBox {
   a: number | boolean;
   /** Refers to how many items are needed to exchange (see .quest as well!) */
   e: number;

@@ -1,4 +1,4 @@
-export type SpriteKey =
+type SpriteKey =
   | "adversaries"
   | "angel_wingless"
   | "animals1"
@@ -176,7 +176,7 @@ export type SpriteKey =
   | "xschar2"
   | "xxschar2";
 
-export interface GSprite {
+interface GSprite {
   rows: number;
   type?: string;
   columns: number;

@@ -1,11 +1,9 @@
-import { MapKey, MonsterKey } from "../../../G";
-
-export type ServerToClient_server_info_event = {
+type ServerToClient_server_info_event = {
   /** A date string of when the event will end */
   end?: string;
 };
 
-export type ServerToClient_server_info_live = {
+type ServerToClient_server_info_live = {
   hp: number;
   live: true;
   map: MapKey;
@@ -16,13 +14,13 @@ export type ServerToClient_server_info_live = {
   y?: number;
 };
 
-export type ServerToClient_server_info_notlive = {
+type ServerToClient_server_info_notlive = {
   live: false;
   /** When the monster will spawn next */
   spawn: string;
 };
 
-export type ServerToClient_server_info = Partial<
+type ServerToClient_server_info = Partial<
   Record<
     MonsterKey,
     | ServerToClient_server_info_live

@@ -1,9 +1,9 @@
-export type StoneKey =
+type StoneKey =
   | "stoneofgold" // Stone of Riches
   | "stoneofluck" // Stone of Luck
   | "stoneofxp"; // Stone of Wisdom
 
-export interface GStone {
+interface GStone {
   days: number;
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */

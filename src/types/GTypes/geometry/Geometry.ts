@@ -1,7 +1,4 @@
-import type { TilesetKey } from "../tilesets/Tilesets";
-import type { Tuple } from "../utils";
-
-export type GeometryKey =
+type GeometryKey =
   | "abtesting"
   | "arena"
   | "bank"
@@ -51,7 +48,7 @@ export type GeometryKey =
   | "winterland"
   | "woffice";
 
-export interface GGeometry {
+interface GGeometry {
   tiles: Array<
     | [TilesetKey, number, number, number]
     | [TilesetKey, number, number, number, number]

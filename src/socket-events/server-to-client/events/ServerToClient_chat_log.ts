@@ -1,4 +1,4 @@
-export type ServerToClient_chat_log = {
+type ServerToClient_chat_log = {
   /* The name of the sending player */
   owner: string;
 

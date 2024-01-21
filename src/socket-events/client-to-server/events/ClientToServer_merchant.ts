@@ -1,4 +1,4 @@
-export type ClientToServer_merchant =
+type ClientToServer_merchant =
   | {
       close: number;
     }

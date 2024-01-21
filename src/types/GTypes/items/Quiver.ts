@@ -1,8 +1,8 @@
-export type QuiverKey =
+type QuiverKey =
   | "quiver" // Quiver
   | "t2quiver"; // Agile Quiver
 
-export interface GQuiver {
+interface GQuiver {
   a?: boolean;
   armor: number;
   dex: number;

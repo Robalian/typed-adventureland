@@ -1,9 +1,4 @@
-import type { ClassKey } from "../classes/Classes";
-import type { ItemKey } from "../items/index";
-import type { TokenKey } from "../tokens/Tokens";
-import type { WeaponType } from "../items/index";
-
-export type NpcKey =
+type NpcKey =
   | "antip2w" // Mr. Dworf
   | "appearance" // Haila
   | "armors"
@@ -131,7 +126,7 @@ export type NpcKey =
   | "wizardrepeater" // Wizard
   | "wnpc"; // Wizard
 
-export type NpcName =
+type NpcName =
   | "Ace"
   | "Alia"
   | "Angel"
@@ -246,7 +241,7 @@ export type NpcName =
   | "Xyn"
   | "Z";
 
-export type NpcRole =
+type NpcRole =
   | "blocker"
   | "bouncer"
   | "citizen"
@@ -290,7 +285,7 @@ export type NpcRole =
   | "transport"
   | "witch";
 
-export interface GNpc {
+interface GNpc {
   allow?: boolean;
   aspeed?: string;
   attack?: number;

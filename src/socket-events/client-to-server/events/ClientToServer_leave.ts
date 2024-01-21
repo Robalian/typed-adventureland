@@ -1,1 +1,1 @@
-export type ClientToServer_leave = void;
+type ClientToServer_leave = void;

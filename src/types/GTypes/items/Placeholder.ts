@@ -1,8 +1,8 @@
-export type PlaceholderKey =
+type PlaceholderKey =
   | "placeholder" // Placeholder
   | "placeholder_m"; // Placeholder
 
-export interface GPlaceholder {
+interface GPlaceholder {
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;
   ignore: boolean;

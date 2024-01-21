@@ -1,1 +1,1 @@
-export type ClientToServer_trade_history = void;
+type ClientToServer_trade_history = void;

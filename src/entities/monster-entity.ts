@@ -1,10 +1,4 @@
-import { ItemInfo } from "../items";
-import { GMonsterAbilities, MonsterKey, MonsterName } from "../types/GTypes/monsters";
-import { EntityBase } from "./base-entity";
-import { SlotType } from "./slots";
-import { StatusInfo } from "./status-info";
-
-export interface MonsterEntity extends EntityBase {
+interface MonsterEntity extends EntityBase {
   // Attributes
   /** Damage Return. */
   dreturn?: number; // TODO: stats, should be on characters as well?

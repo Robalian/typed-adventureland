@@ -1,7 +1,4 @@
-import { StatType } from "../../../items";
-import type { ItemKey } from "../items/index";
-
-export type SetKey =
+type SetKey =
   | "bunny" // Bunny Set
   | "fury" // Rage and Fury
   | "holidays" // Holiday Spirit
@@ -21,7 +18,7 @@ export type SetKey =
   | "wt3" // Heavy Armor
   | "wt4"; // Darkforge Armor
 
-export type GSet = {
+type GSet = {
   explanation?: string;
   items: Array<ItemKey>;
   name: string;

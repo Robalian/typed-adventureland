@@ -1,4 +1,4 @@
-export type StatScrollKey =
+type StatScrollKey =
   | "apiercingscroll" // Armor Piercing Scroll
   | "armorscroll" // Armor Scroll
   | "critscroll" // Critical Hit Scroll
@@ -22,7 +22,7 @@ export type StatScrollKey =
   | "vitscroll" // Vitality Scroll
   | "xpscroll"; // XP Scroll
 
-export interface GStatScroll {
+interface GStatScroll {
   evasion?: number;
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */

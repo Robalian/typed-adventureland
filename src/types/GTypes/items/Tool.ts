@@ -1,8 +1,8 @@
-export type ToolKey =
+type ToolKey =
   | "pickaxe" // Pickaxe
   | "rod"; // Fishing Rod
 
-export interface GTool {
+interface GTool {
   breaks: number;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

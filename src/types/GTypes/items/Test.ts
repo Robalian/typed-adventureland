@@ -1,6 +1,6 @@
-export type TestKey = "test"; // Test
+type TestKey = "test"; // Test
 
-export interface GTest {
+interface GTest {
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

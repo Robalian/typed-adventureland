@@ -1,7 +1,4 @@
-import type { ItemKey } from "../items/index";
-import type { NpcKey } from "../npcs/Npcs";
-
-export type CraftKey =
+type CraftKey =
   | "armorring"
   | "basketofeggs"
   | "bfangamulet"
@@ -73,7 +70,7 @@ export type CraftKey =
   | "wshoes"
   | "xbox";
 
-export interface GCraft {
+interface GCraft {
   items: Array<
     [quantity: number, item: ItemKey] | [quantity: number, item: ItemKey, level: number]
   >;
@@ -81,5 +78,5 @@ export interface GCraft {
   quest?: NpcKey;
 }
 
-export type GCrafts = Record<CraftKey, GCraft> &
+type GCrafts = Record<CraftKey, GCraft> &
   Partial<Record<Exclude<ItemKey, CraftKey>, undefined>>;

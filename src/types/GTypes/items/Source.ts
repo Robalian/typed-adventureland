@@ -1,11 +1,9 @@
-import type { SetKey } from "../sets/Sets";
-
-export type SourceKey =
+type SourceKey =
   | "wbook0" // Book of Knowledge
   | "wbook1" // Book of Secrets
   | "wbookhs"; // Book of Cheer
 
-export interface GSource {
+interface GSource {
   /** Contains information about what stats the item will gain with each compound level. Set if the item is compoundable. */
   compound: {
     dex?: number;

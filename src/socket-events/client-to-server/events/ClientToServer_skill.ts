@@ -1,13 +1,4 @@
-import { SkillKey } from "../../../G";
-import {
-  SkillKey_CoordinatesNeeded,
-  SkillKey_ItemAndTargetNeeded,
-  SkillKey_ItemNeeded,
-  SkillKey_NoParameter,
-  SkillKey_TargetParameter,
-} from "../../../skills";
-
-export type ClientToServer_skill =
+type ClientToServer_skill =
   /** Skills that don't take any parameters */
   | {
       name: SkillKey_NoParameter;

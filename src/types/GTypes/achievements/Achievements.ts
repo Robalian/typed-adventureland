@@ -1,7 +1,4 @@
-import type { ItemKey } from "../items";
-import type { TitleKey } from "../titles/Titles";
-
-export type AchievementKey =
+type AchievementKey =
   | "1000boss" // 1000th Boss
   | "100boss" // 100th Boss
   | "abtesting" // 1000 Test Kills
@@ -20,7 +17,7 @@ export type AchievementKey =
   | "stomped" // Stomped
   | "upgrade10"; // The Final Frontier
 
-export interface GAchievement {
+interface GAchievement {
   count?: number;
   explanation?: string;
   name: string;

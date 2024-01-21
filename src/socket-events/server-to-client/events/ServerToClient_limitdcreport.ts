@@ -1,4 +1,4 @@
-export type ServerToClient_limitdcreport = {
+type ServerToClient_limitdcreport = {
   /** How many of each call you made */
   mcalls: {
     auth?: number;

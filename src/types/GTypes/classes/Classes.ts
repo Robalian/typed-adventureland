@@ -1,12 +1,6 @@
-import type { ProjectileKey } from "../projectiles/Projectiles";
-import type { WeaponKey } from "../items/Weapon";
-import type { OffhandType, WeaponType } from "../items/index";
-import { Tuple } from "../utils";
-import { CharacterEntityCXInfos } from "../../../entities/character-entity";
+type ClassKey = "mage" | "merchant" | "paladin" | "priest" | "ranger" | "rogue" | "warrior";
 
-export type ClassKey = "mage" | "merchant" | "paladin" | "priest" | "ranger" | "rogue" | "warrior";
-
-export interface GClass {
+interface GClass {
   armor: number;
   attack: number;
   base_slots: {

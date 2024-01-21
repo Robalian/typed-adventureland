@@ -1,8 +1,4 @@
-import { CharacterEntity } from "../../../entity";
-import { MapKey } from "../../../G";
-import { ServerIdentifier, ServerRegion } from "../../../server";
-
-export type ServerToClient_welcome = {
+type ServerToClient_welcome = {
   /** The character gets returned if you open a socket with a secret (i.e. /comm and click on one of your characters) */
   character?: CharacterEntity;
   region: ServerRegion;

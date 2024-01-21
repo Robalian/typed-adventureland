@@ -1,5 +1,5 @@
 // TODO: Capture an "update" and confirm that it has friends.
-export type ServerToClient_friend =
+type ServerToClient_friend =
   | {
       event: "lost";
       friends: Array<string>;

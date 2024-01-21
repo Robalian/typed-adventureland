@@ -1,1 +1,1 @@
-export type ClientToServer_players = void;
+type ClientToServer_players = void;

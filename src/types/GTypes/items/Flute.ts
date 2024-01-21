@@ -1,6 +1,6 @@
-export type FluteKey = "flute"; // Flute
+type FluteKey = "flute"; // Flute
 
-export interface GFlute {
+interface GFlute {
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

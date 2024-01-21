@@ -1,7 +1,5 @@
-import { ItemInfo } from "../../../items";
-
 /** Item list from Ponty */
-export type ServerToClient_secondhands = Array<
+type ServerToClient_secondhands = Array<
   ItemInfo & {
     /** If set, this item is not for sale. The player wants to buy this item. */
     b?: boolean;

@@ -1,6 +1,4 @@
-import type { PotKey } from "../items/Pot";
-
-export type ConditionKey =
+type ConditionKey =
   | "authfail" // Authorization Failure
   | "blink" // Blinking
   | "block" // PVP Block
@@ -68,7 +66,7 @@ export type ConditionKey =
   | "xpower" // Power
   | "xshotted"; // X-Shot
 
-export interface GCondition {
+interface GCondition {
   armor?: number;
   attr0?: string;
   aura?: boolean;

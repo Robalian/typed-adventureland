@@ -1,4 +1,4 @@
-export type DimensionKey =
+type DimensionKey =
   | "arcticbee"
   | "armadillo"
   | "bat"
@@ -74,7 +74,7 @@ export type DimensionKey =
   | "wolfie"
   | "xscorpion";
 
-export type GDimension =
+type GDimension =
   | [number, number]
   | [number, number, number]
   | [number, number, number, number]

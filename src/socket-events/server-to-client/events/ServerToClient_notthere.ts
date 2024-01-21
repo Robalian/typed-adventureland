@@ -1,3 +1,3 @@
-export type ServerToClient_notthere = {
+type ServerToClient_notthere = {
   place: "attack";
 };

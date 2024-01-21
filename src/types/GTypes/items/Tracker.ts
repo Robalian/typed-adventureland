@@ -1,6 +1,6 @@
-export type TrackerKey = "tracker"; // Tracktrix
+type TrackerKey = "tracker"; // Tracktrix
 
-export interface GTracker {
+interface GTracker {
   acolor: string;
   action: string;
   explanation: string;

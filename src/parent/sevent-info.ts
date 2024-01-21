@@ -1,9 +1,6 @@
-import { MapKey } from "../G";
-import { BetterUXWrapper } from "../types/GTypes/utils";
-
 /** NOTE: Some event monsters don't have x and y (e.g.: Slenderman) */
 
-export type SMonsterEventLive = {
+type SMonsterEventLive = {
   /** Is the monster currently available? */
   live: true;
   map: MapKey;
@@ -18,13 +15,13 @@ export type SMonsterEventLive = {
   end?: Date;
 };
 
-export type SMonsterEventLiveWithCoordinates = SMonsterEventLive & {
+type SMonsterEventLiveWithCoordinates = SMonsterEventLive & {
   x: number;
   y: number;
 };
 
 // TODO: don't think all events has live / spawn when not live
-export type SMonsterEventNotLive = {
+type SMonsterEventNotLive = {
   /** Is the monster currently available? */
   live: false;
 
@@ -32,12 +29,12 @@ export type SMonsterEventNotLive = {
   spawn: string;
 };
 
-export type SMonsterEvent = BetterUXWrapper<SMonsterEventNotLive | SMonsterEventLive>;
-export type SMonsterEventWithCoordinates = BetterUXWrapper<
+type SMonsterEvent = BetterUXWrapper<SMonsterEventNotLive | SMonsterEventLive>;
+type SMonsterEventWithCoordinates = BetterUXWrapper<
   SMonsterEventNotLive | SMonsterEventLiveWithCoordinates
 >;
 
-export type SEventsInfos = {
+type SEventsInfos = {
   schedule: {
     time_offset: number;
     dailies: Array<number>;

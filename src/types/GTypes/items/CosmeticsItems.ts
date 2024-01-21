@@ -1,13 +1,11 @@
-import type { NpcRole } from "../npcs/Npcs";
-
-export type CosmeticItemKey =
+type CosmeticItemKey =
   | "cosmo0" // New Armor
   | "cosmo1" // New Make-up
   | "cosmo2" // New Hairdo
   | "cosmo3" // New Hat
   | "cosmo4"; // New Accessory
 
-export interface GCosmeticItem {
+interface GCosmeticItem {
   cash: number;
   /** Refers to how many items are needed to exchange (see .quest as well!) */
   e?: number;

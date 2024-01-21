@@ -1,5 +1,5 @@
 // TODO: theese types probably belongs a more common place
-export type SlotType =
+type SlotType =
   | "amulet"
   | "belt"
   | "cape"
@@ -17,7 +17,7 @@ export type SlotType =
   | "ring2"
   | "shoes";
 
-export type TradeSlotType =
+type TradeSlotType =
   | "trade1"
   | "trade2"
   | "trade3"

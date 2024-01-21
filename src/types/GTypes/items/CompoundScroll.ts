@@ -1,10 +1,10 @@
-export type CompoundScrollKey =
+type CompoundScrollKey =
   | "cscroll0" // Compound Scroll
   | "cscroll1" // High Compound Scroll
   | "cscroll2" // Rare Compound Scroll
   | "cscroll3"; // Legendary Compound Scroll
 
-export interface GCompoundScroll {
+interface GCompoundScroll {
   a?: boolean;
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */

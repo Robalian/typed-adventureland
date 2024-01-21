@@ -1,6 +1,4 @@
-import { AnimationKey, ProjectileKey, SkillKey } from "../../../G";
-
-export type ServerToClient_hit = {
+type ServerToClient_hit = {
   anim?: AnimationKey | "miss" | "reflect";
   /** If this is true, the hit was due to an aoe attack */
   aoe?: boolean;

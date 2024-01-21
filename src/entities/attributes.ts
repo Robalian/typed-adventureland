@@ -1,5 +1,5 @@
-// export interface BaseAttribute {}
-export interface Attribute {
+// interface BaseAttribute {}
+interface Attribute {
   apiercing;
   armor;
   attack;

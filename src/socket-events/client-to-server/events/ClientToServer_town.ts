@@ -1,1 +1,1 @@
-export type ClientToServer_town = void;
+type ClientToServer_town = void;

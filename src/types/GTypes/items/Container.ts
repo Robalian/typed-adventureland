@@ -1,8 +1,6 @@
-import type { BoxKey } from "./Box";
+type ContainerKey = "monsterbox"; // Monster Box
 
-export type ContainerKey = "monsterbox"; // Monster Box
-
-export interface GContainer {
+interface GContainer {
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

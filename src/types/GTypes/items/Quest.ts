@@ -1,4 +1,4 @@
-export type QuestKey =
+type QuestKey =
   | "basketofeggs" // Basket of Easter Eggs
   | "egg0" // Easter Egg
   | "egg1" // Easter Egg
@@ -25,7 +25,7 @@ export type QuestKey =
   | "x8" // Quantum Piece
   | "xbox"; // Xmas Box
 
-export interface GQuest {
+interface GQuest {
   a?: boolean;
   /** Refers to how many items are needed to exchange (see .quest as well!) */
   e?: number;

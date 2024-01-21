@@ -1,4 +1,4 @@
-export type ClientToServer_loaded = {
+type ClientToServer_loaded = {
   /** The height of the monitor's resolution */
   height: number;
 

@@ -1,10 +1,10 @@
-export type DungeonKeyKey =
+type DungeonKeyKey =
   | "cryptkey" // The Crypt Key
   | "frozenkey" // The Frozen Cave Key
   | "stonekey" // The Stone Key
   | "tombkey"; // The Tomb Key
 
-export interface GDungeonKey {
+interface GDungeonKey {
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

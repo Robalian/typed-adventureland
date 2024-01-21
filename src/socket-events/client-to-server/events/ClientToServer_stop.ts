@@ -1,3 +1,3 @@
-export type ClientToServer_stop = {
+type ClientToServer_stop = {
   action: "invis" | "town";
 };

@@ -1,8 +1,4 @@
-import type { ClassKey } from "../classes/Classes";
-import type { SetKey } from "../sets/Sets";
-import type { SkillKey } from "../skills/Skills";
-
-export type ChestKey =
+type ChestKey =
   | "cdragon" // Dragon Armor
   | "coat" // Coat
   | "coat1" // Rugged Coat
@@ -34,7 +30,7 @@ export type ChestKey =
   | "xarmor" // Darkforge Armor
   | "xmassweater"; // Xmas Sweater
 
-export interface GChest {
+interface GChest {
   a?: number | boolean;
   ability?: SkillKey;
   apiercing?: number;

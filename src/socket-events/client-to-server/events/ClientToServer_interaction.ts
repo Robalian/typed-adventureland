@@ -1,4 +1,4 @@
-export type ClientToServer_interaction =
+type ClientToServer_interaction =
   | {
       key: string;
     }

@@ -1,4 +1,4 @@
-export type ServerToClient_chest_opened_loot = {
+type ServerToClient_chest_opened_loot = {
   id: string;
   gold: number;
   goldm: number;
@@ -12,11 +12,11 @@ export type ServerToClient_chest_opened_loot = {
   party: boolean;
 };
 
-export type ServerToClient_chest_opened_gone = {
+type ServerToClient_chest_opened_gone = {
   id: string;
   gone: true;
 };
 
-export type ServerToClient_chest_opened =
+type ServerToClient_chest_opened =
   | ServerToClient_chest_opened_loot
   | ServerToClient_chest_opened_gone;

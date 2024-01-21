@@ -1,4 +1,4 @@
-export type ClientToServer_split = {
+type ClientToServer_split = {
   num: number;
   quantity: number;
 };

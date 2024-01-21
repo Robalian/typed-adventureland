@@ -1,4 +1,4 @@
-export type ServerToClient_pm = {
+type ServerToClient_pm = {
   /* The name of the sending player */
   owner: string;
 

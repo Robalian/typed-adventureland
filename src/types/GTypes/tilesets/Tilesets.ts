@@ -1,4 +1,4 @@
-export type TilesetKey =
+type TilesetKey =
   | "ash"
   | "beach"
   | "castle"
@@ -24,7 +24,7 @@ export type TilesetKey =
   | "water"
   | "winter";
 
-export interface GTileset {
+interface GTileset {
   file: string;
   frames?: number;
   frame_width?: number;

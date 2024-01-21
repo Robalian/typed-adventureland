@@ -1,16 +1,16 @@
-export type KeysOfType<Terface, Filter, K extends keyof Terface = keyof Terface> = K extends (
+type KeysOfType<Terface, Filter, K extends keyof Terface = keyof Terface> = K extends (
   Terface[K] extends Filter ? K : never
 )
   ? K
   : never;
 
-export type PickMembers<Terface, K extends keyof Terface> = { [P in K]: Terface[P] };
+type PickMembers<Terface, K extends keyof Terface> = { [P in K]: Terface[P] };
 
-export type PickMembersOfType<Terface, Filter> = PickMembers<Terface, KeysOfType<Terface, Filter>>;
+type PickMembersOfType<Terface, Filter> = PickMembers<Terface, KeysOfType<Terface, Filter>>;
 
-export type PickVoidMembers<Terface> = PickMembersOfType<Terface, void>;
+type PickVoidMembers<Terface> = PickMembersOfType<Terface, void>;
 
-export interface TypedEventEmitter<
+interface TypedEventEmitter<
   Events,
   VoidKeys extends KeysOfType<Events, void> = KeysOfType<Events, void>,
   NotVoidKeys extends Exclude<keyof Events, VoidKeys> = Exclude<keyof Events, VoidKeys>
@@ -34,10 +34,10 @@ export interface TypedEventEmitter<
   emit<K extends VoidKeys>(eventName: K): void;
 }
 
-export type StrictEventEmitter<Events, EventEmitter> = TypedEventEmitter<Events> &
+type StrictEventEmitter<Events, EventEmitter> = TypedEventEmitter<Events> &
   PickMembers<EventEmitter, Exclude<keyof EventEmitter, keyof TypedEventEmitter<Events>>>;
 
-export type StrictEventEmitterPicked<
+type StrictEventEmitterPicked<
   Events,
   EventEmitter,
   Picked extends keyof TypedEventEmitter<Events>,

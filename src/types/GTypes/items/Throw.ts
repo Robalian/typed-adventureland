@@ -1,10 +1,10 @@
-export type ThrowKey =
+type ThrowKey =
   | "confetti" // Pack of Confetti's
   | "firecrackers" // Firecracker
   | "smoke" // Pouch of Poof
   | "snowball"; // Snowball
 
-export interface GThrow {
+interface GThrow {
   action?: string;
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */

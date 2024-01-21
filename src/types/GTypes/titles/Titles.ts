@@ -1,4 +1,4 @@
-export type TitleKey =
+type TitleKey =
   | "abtesting"
   | "critmonger"
   | "fast"
@@ -13,7 +13,7 @@ export type TitleKey =
   | "stomped"
   | "superfast";
 
-export interface GTitle {
+interface GTitle {
   type: string;
   for?: number;
   achievement?: TitleKey;

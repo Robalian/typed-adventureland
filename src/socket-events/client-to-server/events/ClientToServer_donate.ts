@@ -1,3 +1,3 @@
-export type ClientToServer_donate = {
+type ClientToServer_donate = {
   gold: number;
 };

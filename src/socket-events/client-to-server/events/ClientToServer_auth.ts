@@ -1,4 +1,4 @@
-export type ClientToServer_auth = {
+type ClientToServer_auth = {
   // TODO: Find out where to get this auth string
   auth: string;
 

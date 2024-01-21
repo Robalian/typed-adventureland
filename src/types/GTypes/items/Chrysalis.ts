@@ -1,12 +1,9 @@
-import type { MonsterKey } from "../monsters/Monsters";
-import type { QuestKey } from "./Quest";
-
-export type ChrysalisKey =
+type ChrysalisKey =
   | "chrysalis0" // Dragold's Chrysalis
   | "kitty1" // Egg
   | "puppy1"; // Egg
 
-export interface GChrysalis {
+interface GChrysalis {
   a: boolean;
   explanation?: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */

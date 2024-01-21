@@ -1,9 +1,9 @@
-export type JarKey =
+type JarKey =
   | "cxjar" // CX Jar
   | "emotionjar" // Emotion Jar
   | "emptyjar"; // Empty Jar
 
-export interface GJar {
+interface GJar {
   exclusive?: boolean;
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */

@@ -1,8 +1,8 @@
-export type ComputerKey =
+type ComputerKey =
   | "computer" // Ancient Computer
   | "supercomputer"; // Super Computer
 
-export interface GComputer {
+interface GComputer {
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */
   g: number;

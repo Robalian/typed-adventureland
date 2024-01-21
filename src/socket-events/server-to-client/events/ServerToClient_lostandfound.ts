@@ -1,6 +1,4 @@
-import { ItemInfo } from "../../../items";
-
-export type ServerToClient_lostandfound = Array<
+type ServerToClient_lostandfound = Array<
   ItemInfo & {
     /** If set, this item is not for sale. The player wants to buy this item. */
     b?: boolean;

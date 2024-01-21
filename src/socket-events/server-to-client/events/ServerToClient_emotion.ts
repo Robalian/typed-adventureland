@@ -1,6 +1,4 @@
-import { EmotionKey } from "../../../G";
-
-export type ServerToClient_emotion = {
+type ServerToClient_emotion = {
   /** emotion name */
   name: EmotionKey;
 

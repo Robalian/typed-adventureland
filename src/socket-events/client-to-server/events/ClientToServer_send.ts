@@ -1,4 +1,4 @@
-export type ClientToServer_send =
+type ClientToServer_send =
   | {
       gold: number;
       name: string;

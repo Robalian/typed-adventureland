@@ -1,4 +1,4 @@
-export type ClientToServer_mail = {
+type ClientToServer_mail = {
   item: boolean;
   message: string;
   subject: string;

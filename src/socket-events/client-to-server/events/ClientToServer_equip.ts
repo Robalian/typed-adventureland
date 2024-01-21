@@ -1,6 +1,4 @@
-import { SlotType, TradeSlotType } from "../../../entity";
-
-export type ClientToServer_equip =
+type ClientToServer_equip =
   | {
       num: number;
       slot: SlotType;

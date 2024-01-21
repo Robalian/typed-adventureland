@@ -1,6 +1,4 @@
-import { MapKey } from "../../../G";
-
-export type ServerToClient_drop = {
+type ServerToClient_drop = {
   chest: string;
   id: string;
   items: number;

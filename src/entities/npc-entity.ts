@@ -1,9 +1,4 @@
-import { ClassKey } from "../types/GTypes/classes";
-import { ItemKey } from "../types/GTypes/items";
-import { NpcKey, NpcName, NpcRole } from "../types/GTypes/npcs";
-import { EntityBase } from "./base-entity";
-
-export interface NpcEntity extends EntityBase {
+interface NpcEntity extends EntityBase {
   // Attributes
   armor: number;
   attack: number;

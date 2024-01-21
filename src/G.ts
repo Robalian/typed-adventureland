@@ -1,13 +1,5 @@
-import { GData } from "./types/GTypes";
-import { NpcKey } from "./types/GTypes/npcs";
-
-export {}; // Augmentations for the global scope can only be directly nested in external modules or ambient module declarations.
-
-export * from "./types/GTypes";
-
-declare global {
-    const G: GData
-//   const G: {
+declare const G: GData
+//   declare const G: {
 //     /** a look with needed xp per level, key is level */
 //     levels: { [level: number]: number };
 //     base_gold: {
@@ -39,8 +31,7 @@ declare global {
 //         items: [number, ItemsKey][];
 //       };
 //     };
-//     items: { [T in ItemsKey]: import("./items").GItem };
-//     craft: {
+//     items: { [T in ItemsKey]: //     craft: {
 //       [T in ItemsKey]: {
 //         cost: number;
 //         items: Array<[number, ItemsKey, number]>;
@@ -178,11 +169,10 @@ declare global {
 //       };
 //     };
 //   };
-}
 
 // TODO: Get a better name for this.
 // TODO: Get a better naming convention for G data
-export type GMapsNPC = {
+type GMapsNPC = {
   id: NpcKey;
   name?: string;
   position: [number, number];
@@ -191,7 +181,7 @@ export type GMapsNPC = {
   manual: boolean;
 };
 
-export interface GMapData {
+interface GMapData {
   tiles: Array<Array<TileEnum | number>>;
   min_x: number;
   min_y: number;
@@ -204,11 +194,11 @@ export interface GMapData {
   placements: Array<number[]>;
   max_y: number;
 }
-export interface Polygons {
+interface Polygons {
   f1: Array<number[]>;
 }
 
-export enum TileEnum {
+enum TileEnum {
   Castle = "castle",
   Custom = "custom",
   Custom2 = "custom2",

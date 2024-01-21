@@ -1,8 +1,8 @@
-export type SpawnerKey =
+type SpawnerKey =
   | "fieldgen0" // Dampening Field Generator
   | "figurine"; // Terracota Army Figurine
 
-export interface GSpawner {
+interface GSpawner {
   action?: string;
   explanation?: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */

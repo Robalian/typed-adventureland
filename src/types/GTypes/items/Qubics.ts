@@ -1,6 +1,6 @@
-export type QubicsKey = "qubics"; // Qubics
+type QubicsKey = "qubics"; // Qubics
 
-export interface GQubics {
+interface GQubics {
   a: boolean;
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */

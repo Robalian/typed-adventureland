@@ -1,3 +1,3 @@
-export type LevelKey = number;
+type LevelKey = number;
 
-export type GLevel = number;
+type GLevel = number;

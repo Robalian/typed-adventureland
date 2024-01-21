@@ -1,4 +1,4 @@
-// export type EventName =
+// type EventName =
 //   | "abtesting"
 //   | "goobrawl"
 //   | "icegolem"

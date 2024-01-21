@@ -1,6 +1,6 @@
-export type ActivatorKey = "frozenstone"; // Frozen Stone
+type ActivatorKey = "frozenstone"; // Frozen Stone
 
-export interface GActivator {
+interface GActivator {
   action: string;
   explanation: string;
   /** Cost of the item in gold, if an NPC were to sell this item. */

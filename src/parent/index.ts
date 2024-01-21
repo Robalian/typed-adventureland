@@ -1,25 +1,5 @@
-import { BankPacksInfos } from "../bank";
-import { CharacterEntity, MonsterEntity, NpcEntity, TradeSlotType } from "../entity";
-import { PartyCharacter } from "../functions";
-import {
-  GDropList,
-  GDropMaps,
-  GDropMonsters,
-  GDropNormalDrops,
-  ItemKey,
-  MapKey,
-  MonsterKey,
-  SkillKey,
-} from "../G";
-import { ApiCalls } from "../game-event-api-response";
-import { PositionReal } from "../position";
-import { ServerIdentifier, ServerRegion } from "../server";
-import { SocketWithEventsFunctions } from "../socket-events";
-import { BetterUXWrapper } from "../types/GTypes/utils";
-import { SEventsInfos } from "./sevent-info";
-
 /** Tracktrix informations */
-export interface Tracker {
+interface Tracker {
   /** How many points you have for each monster for the given character */
   monsters: Partial<Record<MonsterKey, number>>;
 
@@ -54,7 +34,7 @@ export interface Tracker {
   global_static: GDropList;
 }
 
-export interface XOnlineCharacter {
+interface XOnlineCharacter {
   x: number;
   y: number;
   map: MapKey;
@@ -73,7 +53,7 @@ export interface XOnlineCharacter {
   id: string;
 }
 
-export interface XServerInfos {
+interface XServerInfos {
   addr: string;
   key: string;
   name: string;
@@ -82,85 +62,80 @@ export interface XServerInfos {
   region: string;
 }
 
-export {}; // this is done to make parent a module
-declare global {
-  /** When you access parent via game code, this is what you have access to. */
-  interface Window {
-    $: JQueryStatic;
-    clear_game_logs(): void;
-    close_merchant(): void;
-    //   distance(from: IPosition | PositionReal, to: IPosition | PositionReal): number;
-    exchange(inventoryPosition: number): void;
-    open_merchant(standInventoryPostion: number): void;
-    start_runner(): void;
-    stop_runner(): void;
+/** When you access parent via game code, this is what you have access to. */
+interface Window {
+  $: JQueryStatic;
+  clear_game_logs(): void;
+  close_merchant(): void;
+  //   distance(from: IPosition | PositionReal, to: IPosition | PositionReal): number;
+  exchange(inventoryPosition: number): void;
+  open_merchant(standInventoryPostion: number): void;
+  start_runner(): void;
+  stop_runner(): void;
 
-    /** The response is given via game.on('api_response',function(data){ where data.type is equal to for example merchants */
-    api_call<K extends keyof ApiCalls = keyof ApiCalls>(call: K, arg1?: {}, arg2?: {callback: (data: [ApiCalls[K]]) => void}): void;
+  /** The response is given via game.on('api_response',declare function(data){ where data.type is equal to for example merchants */
+  api_call<K extends keyof ApiCalls = keyof ApiCalls>(call: K, arg1?: {}, arg2?: {callback: (data: [ApiCalls[K]]) => void}): void;
 
-    /**
-     * Joins a giveaway for the specified item
-     * @param slot_name Trade slot containing the item you want to join the giveaway of
-     * @param characterName Name of the character you want to join the giveaway of
-     * @param rid Unique id of the item you want to join the giveaway of
-     */
-    join_giveaway(slot_name: TradeSlotType, characterName: string, rid: string): unknown;
+  /**
+   * Joins a giveaway for the specified item
+   * @param slot_name Trade slot containing the item you want to join the giveaway of
+   * @param characterName Name of the character you want to join the giveaway of
+   * @param rid Unique id of the item you want to join the giveaway of
+   */
+  join_giveaway(slot_name: TradeSlotType, characterName: string, rid: string): unknown;
 
-    /** show a modal, TODO: investigate paramters */
-    show_modal(arg1: any, arg2: any): any;
+  /** show a modal, TODO: investigate paramters */
+  show_modal(arg1: any, arg2: any): any;
 
-    sprite_image(name: string, args?: any): string;
+  sprite_image(name: string, args?: any): string;
 
-    smart_eval(code: string): void;
-    render_item(selector: string, args: any): string | undefined;
-    render_computer(): string | undefined;
+  smart_eval(code: string): void;
+  render_item(selector: string, args: any): string | undefined;
+  render_computer(): string | undefined;
 
-    open_chest(id: string | number): Promise<void>;
-    d_text(message: string, entity: CharacterEntity, args?: { color: string }): void;
+  open_chest(id: string | number): Promise<void>;
+  d_text(message: string, entity: CharacterEntity, args?: { color: string }): void;
 
-    X: {
-      characters: Array<XOnlineCharacter>;
-      servers: Array<XServerInfos>;
-    };
+  X: {
+    characters: Array<XOnlineCharacter>;
+    servers: Array<XServerInfos>;
+  };
 
-    chests: {
-      [id: string]: ChestInfo;
-    };
+  chests: {
+    [id: string]: ChestInfo;
+  };
 
-    entities: { [id: string]: BetterUXWrapper<CharacterEntity | MonsterEntity | NpcEntity> };
-    next_skill: { [T in SkillKey]?: Date };
-    //   npcs: GMapsNPC[];
+  entities: { [id: string]: BetterUXWrapper<CharacterEntity | MonsterEntity | NpcEntity> };
+  next_skill: { [T in SkillKey]?: Date };
+  //   npcs: GMapsNPC[];
 
-    /** @deprecated Prefer `get_party()` */
-    party: Record<string, PartyCharacter>;
+  /** @deprecated Prefer `get_party()` */
+  party: Record<string, PartyCharacter>;
 
-    /** Contains the name of every character in your party */
-    party_list: string[];
-    /** Contains a list of the last 40 ping response times */
-    pings: number[];
+  /** Contains the name of every character in your party */
+  party_list: string[];
+  /** Contains a list of the last 40 ping response times */
+  pings: number[];
 
-    server_identifier: ServerIdentifier;
-    server_region: ServerRegion;
+  server_identifier: ServerIdentifier;
+  server_region: ServerRegion;
 
-    socket: Omit<SocketIO.Socket, keyof SocketWithEventsFunctions> & SocketWithEventsFunctions;
+  socket: Omit<SocketIO.Socket, keyof SocketWithEventsFunctions> & SocketWithEventsFunctions;
 
-    tracker: Record<string, never> | Tracker;
+  tracker: Record<string, never> | Tracker;
 
-    bank_packs: BankPacksInfos;
+  bank_packs: BankPacksInfos;
 
-    /** PIXI element for the game map */
-    map: PIXI.Container;
+  /** PIXI element for the game map */
+  map: PIXI.Container;
 
-    /** Contains user drawings for cleanup */
-    drawings: Array<PIXI.Graphics>;
+  /** Contains user drawings for cleanup */
+  drawings: Array<PIXI.Graphics>;
 
-    S: SEventsInfos;
-  }
+  S: SEventsInfos;
 }
 
-export type ChestInfo = PositionReal & {
+type ChestInfo = PositionReal & {
   alpha: number;
   skin: "chest3" | string;
 };
-
-export * from "./sevent-info";

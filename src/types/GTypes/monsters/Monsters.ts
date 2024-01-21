@@ -1,8 +1,4 @@
-import type { ConditionKey } from "../conditions/Conditions";
-import type { ProjectileKey } from "../projectiles/Projectiles";
-import type { WeaponKey } from "../items/Weapon";
-
-export type MonsterKey =
+type MonsterKey =
   | "a1" // Spike
   | "a2" // Bill
   | "a3" // Lestat
@@ -125,7 +121,7 @@ export type MonsterKey =
   | "xscorpion" // Scorpion
   | "zapper0"; // Zapper
 
-export type MonsterName =
+type MonsterName =
   | "Angel"
   | "Angry Chest"
   | "Arctic Bee"
@@ -222,7 +218,7 @@ export type MonsterName =
   | "Wild Boar"
   | "Zapper";
 
-export type GMonsterAbilities = {
+type GMonsterAbilities = {
   anger?: {
     cooldown: number;
     radius: number;
@@ -313,7 +309,7 @@ export type GMonsterAbilities = {
   };
 };
 
-export interface GMonster {
+interface GMonster {
   "1hp"?: boolean;
   abilities?: GMonsterAbilities;
   // TODO: stat should be of type stat in the future.

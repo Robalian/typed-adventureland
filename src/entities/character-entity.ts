@@ -1,13 +1,4 @@
-import {
-  ItemInfo,
-  TradeItemInfo,
-} from "../items";
-import { ClassKey } from "../types/GTypes/classes";
-import { ItemKey, StandKey } from "../types/GTypes/items";
-import { EntityBase } from "./base-entity";
-import { SlotType, TradeSlotType } from "./slots";
-
-export interface CharacterEntityCXInfos {
+interface CharacterEntityCXInfos {
   chin?: string;
   face?: string;
   hair?: string;
@@ -17,13 +8,13 @@ export interface CharacterEntityCXInfos {
   upper?: string;
 }
 
-export type CharacterEntitySlotsInfos = {
+type CharacterEntitySlotsInfos = {
   [T in SlotType]: ItemInfo  | null;
 } & {
   [T in TradeSlotType]?: TradeItemInfo | null;
 };
 
-export type CharacterEntityQInfos = {
+type CharacterEntityQInfos = {
   compound?: {
     len: number;
     ms: number;
@@ -52,7 +43,7 @@ export type CharacterEntityQInfos = {
   };
 };
 
-export interface CharacterEntity extends EntityBase {
+interface CharacterEntity extends EntityBase {
   // Attributes
   /** Attacks/second. */
   frequency: number;

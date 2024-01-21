@@ -1,11 +1,11 @@
-export type UpgradeScrollKey =
+type UpgradeScrollKey =
   | "scroll0" // Upgrade Scroll
   | "scroll1" // High Upgrade Scroll
   | "scroll2" // Rare Upgrade Scroll
   | "scroll3" // Legendary Upgrade Scroll
   | "scroll4"; // Ultimate Upgrade Scroll
 
-export interface GUpgradeScroll {
+interface GUpgradeScroll {
   a?: boolean;
   exclusive?: boolean;
   explanation: string;

@@ -1,7 +1,4 @@
-import type { ClassKey } from "../classes/Classes";
-import type { SetKey } from "../sets/Sets";
-
-export type GloveKey =
+type GloveKey =
   | "fierygloves" // Fiery Gloves
   | "gloves" // Gloves
   | "gloves1" // Rugged Gloves
@@ -23,7 +20,7 @@ export type GloveKey =
   | "wgloves" // Wanderer's Gloves
   | "xgloves"; // Darkforge Gloves
 
-export interface GGlove {
+interface GGlove {
   a?: number | boolean;
   ability?: string;
   apiercing?: number;

@@ -1,6 +1,6 @@
-export type EmotionKey = "drop_egg" | "hearts_single";
+type EmotionKey = "drop_egg" | "hearts_single";
 
-export interface GEmotion {
+interface GEmotion {
   fx: EmotionKey;
   cooldown: number;
 }

@@ -1,4 +1,4 @@
-export type ClientToServer_compound = {
+type ClientToServer_compound = {
   calculate?: boolean;
   clevel: number;
   items: [number, number, number];

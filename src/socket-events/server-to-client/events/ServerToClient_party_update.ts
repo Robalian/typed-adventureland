@@ -1,7 +1,4 @@
-import { CharacterEntityCXInfos } from "../../../entities/character-entity";
-import { ClassKey, MapKey } from "../../../G";
-
-export type ServerToClient_party_update = {
+type ServerToClient_party_update = {
   list: string[];
   message?: string;
   party: {

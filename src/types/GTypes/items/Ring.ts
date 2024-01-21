@@ -1,6 +1,4 @@
-import type { SetKey } from "../sets/Sets";
-
-export type RingKey =
+type RingKey =
   | "armorring" // Ring of Armor
   | "cdarktristone" // Dark Tri-Stone
   | "cring" // Ring of The Crypt
@@ -22,7 +20,7 @@ export type RingKey =
   | "vring" // Vampiring
   | "zapper"; // The Zapper
 
-export interface GRing {
+interface GRing {
   a?: boolean;
   ability?: string;
   action?: string;

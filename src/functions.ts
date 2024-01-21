@@ -64,6 +64,7 @@ declare global {
 
   function unmap_key(key: string): void;
   function map_key(key: string, thing: string, arg?: string): void;
+  function set_keymap(keymap: Record<string, { name: SkillKey }>): void;
   function load_code(nameOrSlot: string | number, onerror?: any): void;
 
   /**
@@ -533,6 +534,8 @@ declare global {
   function show_json(value: any): void;
   function set(key: string, value: unknown): unknown;
   function set_message(text: string, color?: string): any;
+  function set_skillbar(keys: string[]): void;
+  function set_skillbar(...keys: string[]): void;
   function simple_distance(from: IPosition | PositionReal, to: IPosition | PositionReal): number;
 
   function start_character(characterName: string, codeSlotOrName?: string | number): any;

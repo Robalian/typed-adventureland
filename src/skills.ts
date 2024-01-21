@@ -73,10 +73,12 @@ export type SkillTarget = string | { id: string };
 
 declare global {
   function use_skill(name: "use_hp" | "use_mp"): Promise<unknown>;
+  
+  function use_skill(name: "regen_hp" | "regen_mp"): Promise<unknown>;
 
   function use_skill(name: "magiport", target: SkillTarget): Promise<unknown>;
 
-  function use_skill(name: "use_town"): Promise<unknown>;
+  function use_skill(name: "use_town" | "town"): Promise<unknown>;
 
   /** For destination, it's an array of [x, y] */
   function use_skill(

@@ -133,6 +133,8 @@ interface Window {
   drawings: Array<PIXI.Graphics>;
 
   S: SEventsInfos;
+  
+  skillbar: string[];
 }
 
 type ChestInfo = PositionReal & {

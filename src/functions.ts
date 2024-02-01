@@ -442,7 +442,7 @@ declare function is_pvp(): boolean;
 declare function is_in_range(entity: Entity, skill?: SkillKey): boolean;
 declare function is_transporting(entity: Entity): boolean;
 declare function is_moving(entity: Entity): boolean;
-declare function is_on_cooldown(skill: string): boolean;
+declare function is_on_cooldown(skill: SkillKey): boolean;
 
 /** returns true if you are silenced or disabled */
 declare function is_silenced(entity: Entity): boolean;

@@ -100,3 +100,5 @@ declare function bank_store(
  * @param amount The amount of gold to withdraw
  */
 declare function bank_withdraw(amount: number): void;
+
+declare function bank_swap(pack: BankPackTypeItemsOnly, item1_slot: number, item2_slot: number): Promise<void>;

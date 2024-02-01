@@ -437,6 +437,7 @@ declare function get_nearest_monster(args: {
 
 declare function heal(target: Entity): any;
 declare function use_hp_or_mp(): void;
+declare function interact(name: string) : Promise<{started:true} | {completed:true} | {failed:true}>;
 /** Checks whether or not we can attack other players */
 declare function is_pvp(): boolean;
 declare function is_in_range(entity: Entity, skill?: SkillKey): boolean;
